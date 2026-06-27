@@ -1,0 +1,43 @@
+---
+import { ScrollImagesReveal } from 'skiper-islands/reveal/ScrollImagesReveal'
+import { ScrollWithFade } from 'skiper-islands/scroll/ScrollWithFade'
+
+const straps = [
+  { id: 'strap-calf', name: 'Calf Leather Strap', price: '$80', img: 'https://source.unsplash.com/300x300/?watch+strap+leather+brown' },
+  { id: 'strap-suede', name: 'Suede Strap', price: '$65', img: 'https://source.unsplash.com/300x300/?watch+strap+suede' },
+  { id: 'strap-canvas', name: 'Canvas Strap', price: '$45', img: 'https://source.unsplash.com/300x300/?watch+strap+canvas' },
+  { id: 'strap-steel', name: 'Steel Bracelet', price: '$150', img: 'https://source.unsplash.com/300x300/?watch+bracelet+steel' },
+]
+---
+
+<section class="py-24 px-6 bg-white">
+  <div class="max-w-7xl mx-auto">
+    <ScrollWithFade>
+      <h2 class="font-display text-4xl md:text-5xl text-[#1A1A1A] mb-4">Change it up.</h2>
+    </ScrollWithFade>
+
+    <p class="text-[#6B6B6B] text-sm mb-12">Every watch deserves a second look.</p>
+
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+      {straps.map((s) => (
+        <a href="#" class="group">
+          <ScrollImagesReveal direction="up">
+            <div class="bg-gray-50 overflow-hidden mb-4">
+              <img src={s.img} alt={s.name} class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500" />
+            </div>
+            <h3 class="font-body text-sm font-bold text-[#1A1A1A] tracking-[0.1em] uppercase">{s.name}</h3>
+            <p class="text-xs text-[#6B6B6B] mt-1">{s.price}</p>
+          </ScrollImagesReveal>
+        </a>
+      ))}
+    </div>
+
+    <div class="text-center mt-12">
+      <ScrollWithFade>
+        <a href="#" class="inline-block border border-[#1A1A1A] text-[#1A1A1A] px-10 py-3 text-sm tracking-[0.2em] uppercase hover:bg-[#1A1A1A] hover:text-white transition-colors">
+          Shop straps
+        </a>
+      </ScrollWithFade>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,10 @@
+[
+  { "id": "aevo-1", "name": "arktis", "collection": "daylight", "price": "$320", "new": true, "colors": ["#2D4A3E", "#E8C97E", "#111111"] },
+  { "id": "aevo-2", "name": "sundial", "collection": "daylight", "price": "$280", "new": true, "colors": ["#C4A882", "#4A4A4A", "#FFFFFF"] },
+  { "id": "aevo-3", "name": "transit", "collection": "traveler", "price": "$450", "new": false, "colors": ["#2D4A3E", "#B07D45"] },
+  { "id": "aevo-4", "name": "harbor", "collection": "traveler", "price": "$380", "new": false, "colors": ["#1A3A5C", "#888888"] },
+  { "id": "aevo-5", "name": "strand", "collection": "coastal", "price": "$240", "new": false, "colors": ["#D4A76A", "#3A6B4E"] },
+  { "id": "aevo-6", "name": "fjord", "collection": "coastal", "price": "$520", "new": false, "colors": ["#2D4A3E", "#8B7355"] },
+  { "id": "aevo-7", "name": "vind", "collection": "summer", "price": "$290", "new": true, "colors": ["#E8C97E", "#FFFFFF", "#111111"] },
+  { "id": "aevo-8", "name": "sten", "collection": "summer", "price": "$360", "new": true, "colors": ["#5A5A5A", "#C4A882"] }
+]

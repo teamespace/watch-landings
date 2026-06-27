@@ -1,0 +1,70 @@
+{
+  "aevo": {
+    "hero": "watch+lifestyle+outdoor+daylight",
+    "hero_desktop": "person+cycling+sunlight+stockholm",
+    "hero_mobile": "watch+wrist+outdoor",
+    "new_arrivals": "watch+product+white+background",
+    "collab": "ocean+plastic+recycling+beach",
+    "bestsellers": "watch+minimal+lifestyle",
+    "about": "stockholm+scandinavian+interior",
+    "strap_builder": "watch+strap+leather+detail",
+    "lifestyle_1": "cafe+table+morning+coffee",
+    "press_bg": "magazine+editorial+minimal"
+  },
+  "formd": {
+    "hero_product": "watch+white+background+minimal",
+    "hero_product_angle": "watch+side+angle+product",
+    "model_families": "watch+product+front+white",
+    "new_releases": "watch+bauhaus+minimal",
+    "manufacture": "watch+gears+workshop+macro",
+    "workshop_1": "watchmaker+hands+bench+detail",
+    "workshop_2": "watch+movement+caliber+macro",
+    "workshop_3": "gears+machinery+precision",
+    "bestsellers": "watch+product+front+clean",
+    "press": "magazine+editorial+minimal",
+    "retailer": "store+interior+minimal+architecture"
+  },
+  "krag": {
+    "hero": "mountain+landscape+dramatic+terrain",
+    "hero_watch": "field+watch+outdoor+gear",
+    "product_ridge": "watch+steel+outdoor+product",
+    "product_cairn": "field+watch+canvas+strap",
+    "product_summit": "dress+watch+minimal",
+    "product_traverse": "dive+watch+steel",
+    "product_plateau": "watch+bronze+product",
+    "product_crag": "gmt+watch+steel",
+    "boutique": "limited+edition+watch+dark",
+    "showroom": "store+interior+minimal+architecture",
+    "press": "magazine+mountain+adventure",
+    "terrain_1": "cliff+coast+landscape",
+    "terrain_2": "valley+mountain+view"
+  },
+  "nocte": {
+    "hero_product": "watch+wrist+dark+moody",
+    "hero_watch": "watch+grey+background+moody",
+    "hero_lifestyle": "night+city+minimal+editorial",
+    "collections": "watch+product+dark+background",
+    "featured_product": "watch+leather+strap+ambient",
+    "build_your_watch": "watch+case+parts+detail",
+    "lookbook_1": "tokyo+night+editorial+photo",
+    "lookbook_2": "oslo+architecture+minimal",
+    "lookbook_3": "cape+town+editorial+landscape",
+    "strap_product": "watch+strap+leather+detail",
+    "press_bg": "editorial+magazine+dark",
+    "hero_large": "watch+dark+editorial+portrait"
+  },
+  "sela": {
+    "hero_1": "watch+tropical+beach+wrist",
+    "hero_2": "gmt+watch+travel+editorial",
+    "hero_3": "watch+sunset+warm+light",
+    "featured_products": "watch+warm+cream+background",
+    "collections_nav": "watch+product+indonesian",
+    "brand_story": "watchmaker+workshop+natural+light",
+    "design_process": "sketch+watch+design+process",
+    "gmt_feature": "gmt+watch+dark+background+product",
+    "event_1": "watch+fair+event+community",
+    "event_2": "pop+up+store+editorial",
+    "accessories": "watch+strap+leather+detail",
+    "newsletter_bg": "textile+woven+indonesian+pattern"
+  }
+}

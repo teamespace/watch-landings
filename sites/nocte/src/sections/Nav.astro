@@ -1,0 +1,60 @@
+---
+import { TextRollNavigation } from 'skiper-islands/nav/TextRollNavigation'
+import { ScrollWithFade } from 'skiper-islands/scroll/ScrollWithFade'
+import { MobileNav } from '../components/MobileNav'
+---
+
+<ScrollWithFade>
+  <nav class="fixed top-0 left-0 right-0 z-50 transition-colors duration-300" id="nocte-nav">
+    <div class="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
+      <a href="/" class="font-display text-2xl tracking-wider text-white" id="nav-logo">nocte</a>
+
+      <div class="hidden md:flex items-center gap-8">
+        <TextRollNavigation
+          links={[
+            { label: 'Collections', href: '#collections' },
+            { label: 'Lookbook', href: '#lookbook' },
+            { label: 'About', href: '#about' },
+          ]}
+          textColor="#ffffff"
+          hoverColor="#C9A96E"
+          fontSize="13px"
+        />
+      </div>
+
+      <div class="flex items-center gap-6">
+        <button class="text-white text-sm tracking-wider hidden md:block" id="search-btn">Search</button>
+        <button class="text-white text-sm tracking-wider relative" id="cart-btn">
+          Cart <span class="absolute -top-2 -right-4 bg-[#C9A96E] text-[10px] w-4 h-4 rounded-full flex items-center justify-center text-white">0</span>
+        </button>
+        <div class="md:hidden">
+          <MobileNav client:load />
+        </div>
+      </div>
+    </div>
+  </nav>
+</ScrollWithFade>
+
+<script>
+  const nav = /** @type {HTMLElement} */ (document.getElementById('nocte-nav'))
+  const logo = /** @type {HTMLElement} */ (document.getElementById('nav-logo'))
+
+  const observer = new IntersectionObserver(
+    ([entry]) => {
+      if (!nav) return
+      const isVisible = entry.isIntersecting
+      nav.style.backgroundColor = isVisible ? 'transparent' : '#ffffff'
+      nav.style.color = isVisible ? '#ffffff' : '#1A1A1A'
+      if (logo) logo.style.color = isVisible ? '#ffffff' : '#1A1A1A'
+      nav.querySelectorAll('a, button').forEach((el) => {
+        if (el.closest('[class*="md\\:hidden"]')) return
+        const htmlEl = /** @type {HTMLElement} */ (el)
+        htmlEl.style.color = isVisible ? '#ffffff' : '#1A1A1A'
+      })
+    },
+    { threshold: 0 }
+  )
+
+  const hero = document.querySelector('main > section:first-child')
+  if (hero) observer.observe(hero)
+</script>

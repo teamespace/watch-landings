@@ -1,0 +1,30 @@
+---
+const events = [
+  { id: 'fair', name: 'Jakarta Watch Fair 2026', date: 'March 2026', note: 'We showed the GMT Transit prototype for the first time.', img: 'https://source.unsplash.com/400x300/?watch+fair+event+community' },
+  { id: 'popup', name: 'Pop-Up at Gudang Gudang', date: 'January 2026', note: 'Two weeks in Yogyakarta. Met everyone who stopped by.', img: 'https://source.unsplash.com/400x300/?pop+up+store+editorial' },
+  { id: 'press', name: 'Featured in Warna Magazine', date: 'December 2025', note: 'A profile on independent watch brands in Southeast Asia.', img: 'https://source.unsplash.com/400x300/?magazine+editorial+watch' },
+]
+---
+
+<section class="py-16 px-6 max-w-6xl mx-auto">
+  <h2 class="text-[11px] uppercase tracking-[0.2em] text-[#7A7A72] mb-10">What we've been up to</h2>
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+    {events.map((event) => (
+      <div class="bg-[#EFEDE8] group cursor-pointer">
+        <div class="aspect-[4/3] overflow-hidden">
+          <img src={event.img} alt={event.name} class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" />
+        </div>
+        <div class="p-4">
+          <p class="text-[11px] uppercase tracking-[0.1em] text-[#7A7A72]">{event.date}</p>
+          <h3 class="font-display text-lg text-[#1C1C1A] mt-1">{event.name}</h3>
+          <p class="text-sm text-[#7A7A72] mt-1 leading-relaxed">{event.note}</p>
+        </div>
+      </div>
+    ))}
+  </div>
+  <div class="mt-10 text-center">
+    <a href="/publication" class="inline-block border border-[#1C1C1A] text-[#1C1C1A] px-8 py-3 text-sm font-medium tracking-wide hover:bg-[#1C1C1A] hover:text-white transition-colors">
+      See all publications
+    </a>
+  </div>
+</section>

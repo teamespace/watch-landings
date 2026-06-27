@@ -1,0 +1,27 @@
+---
+---
+
+<section class="py-24 px-6 bg-[#1A1A18]">
+  <div class="max-w-7xl mx-auto">
+    <p class="text-xs uppercase tracking-[0.2em] text-white/60 mb-2">Boutique Exclusives</p>
+    <p class="text-white/40 text-sm mb-12">Available only here. Not on the shelf anywhere.</p>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      {[
+        { name: 'Ridge 40 GMT MKII — Night Dial', batch: 'Batch 03/50', price: '$780' },
+        { name: 'Cairn 38 Field — Bronze', batch: 'Batch 02/35', price: '$620' },
+        { name: 'Traverse 39 — Frozen Blue', batch: 'Batch 01/40', price: '$890' },
+      ].map((item) => (
+        <div class="bg-white/5 border border-white/10 p-8">
+          <p class="text-xs text-[#B07D45] uppercase tracking-[0.15em] mb-4">Limited Edition</p>
+          <p class="text-white font-medium text-lg leading-snug">{item.name}</p>
+          <p class="text-white/40 text-xs mt-2">{item.batch}</p>
+          <p class="text-white text-xl font-bold mt-4">{item.price}</p>
+          <a href="/collections/boutique" class="inline-block mt-4 text-xs text-white/60 uppercase tracking-[0.15em] hover:text-white transition-colors">
+            Inquire →
+          </a>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

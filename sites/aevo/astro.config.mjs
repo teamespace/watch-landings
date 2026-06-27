@@ -1,0 +1,15 @@
+import { defineConfig } from 'astro/config'
+import react from '@astrojs/react'
+import tailwind from '@astrojs/tailwind'
+import cloudflare from '@astrojs/cloudflare'
+
+export default defineConfig({
+  output: 'static',
+  integrations: [react(), tailwind()],
+  adapter: cloudflare({
+    platformProxy: { enabled: true }
+  }),
+  server: { port: 4321 },
+  site: 'https://aevo-byes.pages.dev',
+  devToolbar: { enabled: false },
+})

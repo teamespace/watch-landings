@@ -1,0 +1,25 @@
+---
+const heroImg = 'https://source.unsplash.com/1920x1080/?watch+lifestyle+outdoor+daylight'
+---
+
+<section class="relative h-screen w-full overflow-hidden">
+  <div
+    class="absolute inset-0 bg-cover bg-center"
+    style={`background-image: url('${heroImg}')`}
+  />
+  <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
+  <div class="absolute bottom-12 left-8 md:left-16 max-w-xl text-white">
+    <h1 class="text-4xl md:text-6xl font-bold lowercase leading-tight mb-4">
+      Watches for wherever you end up.
+    </h1>
+    <p class="text-base md:text-lg text-white/80 mb-6 max-w-md">
+      Designed in Stockholm. Built to last longer than the season.
+    </p>
+    <a
+      href="/watches"
+      class="inline-block bg-[#2D4A3E] text-white px-8 py-3 text-sm font-medium tracking-wide lowercase hover:bg-[#1D3A2E] transition-colors"
+    >
+      Shop now
+    </a>
+  </div>
+</section>

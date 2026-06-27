@@ -1,0 +1,35 @@
+---
+import { HorizontalTextReveal } from 'skiper-islands'
+---
+
+<section class="py-24 px-6 bg-[#EDEDEA]">
+  <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+    <div class="aspect-square overflow-hidden">
+      <img
+        src="https://source.unsplash.com/600x600/?field+watch+outdoor"
+        alt="Cairn 38 Field"
+        class="w-full h-full object-cover"
+      />
+    </div>
+    <div>
+      <HorizontalTextReveal
+        client:visible
+        text="CAIRN 38 FIELD"
+        color="#0D0D0D"
+        fontSize="clamp(1.8rem, 4vw, 3rem)"
+        fontWeight={700}
+        direction="left"
+      />
+      <p class="text-brand-text-secondary text-base leading-relaxed mt-6 max-w-md">
+        Swiss mechanical movement, 80-hour power reserve, anti-reflective sapphire crystal. The watch you pack first.
+      </p>
+      <p class="text-2xl font-bold text-brand-primary mt-6">$490</p>
+      <a
+        href="/collections/cairn-38-field"
+        class="inline-block mt-6 px-8 py-3 border border-brand-primary text-brand-primary text-sm uppercase tracking-widest hover:bg-brand-primary hover:text-white transition-colors"
+      >
+        Discover
+      </a>
+    </div>
+  </div>
+</section>

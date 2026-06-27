@@ -1,0 +1,26 @@
+---
+const accessories = [
+  { id: 'strap-1', name: 'Woven NATO Strap', price: '$45', img: 'https://source.unsplash.com/300x300/?watch+strap+leather+detail' },
+  { id: 'strap-2', name: 'Terracotta Leather Strap', price: '$65', img: 'https://source.unsplash.com/300x300/?leather+watch+strap+brown' },
+  { id: 'bezel-1', name: 'Steel GMT Bezel', price: '$85', img: 'https://source.unsplash.com/300x300/?watch+bezel+steel' },
+  { id: 'pouch', name: 'Travel Pouch', price: '$35', img: 'https://source.unsplash.com/300x300/?fabric+pouch+travel' },
+  { id: 'spring', name: 'Spring Bar Tool', price: '$12', img: 'https://source.unsplash.com/300x300/?tool+metal+detail' },
+]
+---
+
+<section class="py-16 px-6 max-w-6xl mx-auto">
+  <h2 class="text-[11px] uppercase tracking-[0.2em] text-[#7A7A72] mb-10">The details</h2>
+  <div class="flex gap-6 overflow-x-auto pb-4 snap-x snap-mandatory scrollbar-hide -mx-6 px-6">
+    {accessories.map((item) => (
+      <a href={`/accessories/${item.id}`} class="snap-start shrink-0 group">
+        <div class="w-[200px]">
+          <div class="aspect-square bg-[#EFEDE8] overflow-hidden mb-3">
+            <img src={item.img} alt={item.name} class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" />
+          </div>
+          <h3 class="font-display text-sm text-[#1C1C1A]">{item.name}</h3>
+          <p class="text-sm text-[#7A7A72]">{item.price}</p>
+        </div>
+      </a>
+    ))}
+  </div>
+</section>

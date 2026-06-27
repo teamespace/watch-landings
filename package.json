@@ -1,0 +1,14 @@
+{
+  "name": "watch-brands",
+  "private": true,
+  "scripts": {
+    "dev": "pnpm --parallel --filter !@skiper-islands dev",
+    "build": "pnpm --recursive build",
+    "lint": "pnpm --recursive lint",
+    "clean": "pnpm --recursive clean"
+  },
+  "engines": {
+    "node": ">=18",
+    "pnpm": ">=8"
+  }
+}

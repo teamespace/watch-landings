@@ -1,0 +1,32 @@
+---
+const collections = [
+  { name: 'GMT Transit', slug: 'gmt-transit', img: 'https://source.unsplash.com/200x200/?gmt+watch+travel' },
+  { name: 'Kronosprinter', slug: 'kronosprinter', img: 'https://source.unsplash.com/200x200/?watch+chronograph' },
+  { name: 'Meca', slug: 'meca', img: 'https://source.unsplash.com/200x200/?watch+quartz' },
+  { name: 'Astronomer', slug: 'astronomer', img: 'https://source.unsplash.com/200x200/?watch+astronomy' },
+  { name: 'Zenga', slug: 'zenga', img: 'https://source.unsplash.com/200x200/?watch+leather+strap' },
+  { name: 'Pa:Gi', slug: 'pagi', img: 'https://source.unsplash.com/200x200/?watch+morning+light' },
+  { name: 'So:Re', slug: 'sore', img: 'https://source.unsplash.com/200x200/?watch+afternoon' },
+]
+---
+
+<section class="py-16 px-6 max-w-6xl mx-auto">
+  <h2 class="text-[11px] uppercase tracking-[0.2em] text-[#7A7A72] mb-10">What we make</h2>
+  <div class="flex gap-4 overflow-x-auto pb-4 snap-x snap-mandatory scrollbar-hide -mx-6 px-6">
+    {collections.map((col) => (
+      <a
+        href={`/collections/${col.slug}`}
+        class="snap-start shrink-0 group block w-[180px]"
+      >
+        <div class="h-12 bg-[#EFEDE8] overflow-hidden transition-all duration-400 ease-[cubic-bezier(0.76,0,0.24,1)] group-hover:h-[200px]">
+          <div class="h-12 flex items-center px-4">
+            <span class="font-display text-lg text-[#1C1C1A]">{col.name}</span>
+          </div>
+          <div class="px-4 pb-4 opacity-0 group-hover:opacity-100 transition-opacity duration-200 delay-150">
+            <img src={col.img} alt={col.name} class="w-full h-32 object-cover" loading="lazy" />
+          </div>
+        </div>
+      </a>
+    ))}
+  </div>
+</section>

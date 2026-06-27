@@ -1,0 +1,14 @@
+{
+  "extends": "astro/tsconfigs/strict",
+  "compilerOptions": {
+    "jsx": "react-jsx",
+    "jsxImportSource": "react",
+    "baseUrl": ".",
+    "paths": {
+      "skiper-islands": ["../../packages/skiper-islands/src/index.ts"],
+      "skiper-islands/*": ["../../packages/skiper-islands/src/*"]
+    },
+    "verbatimModuleSyntax": false
+  },
+  "exclude": ["../../packages/skiper-islands"]
+}

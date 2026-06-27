@@ -1,0 +1,46 @@
+---
+import { ScrollImagesReveal } from 'skiper-islands/reveal/ScrollImagesReveal'
+import { ImageCursorTrail } from 'skiper-islands/effects/ImageCursorTrail'
+import { ScrollWithFade } from 'skiper-islands/scroll/ScrollWithFade'
+---
+
+<section id="lookbook" class="py-24 px-6 bg-white">
+  <div class="max-w-7xl mx-auto">
+    <ScrollWithFade>
+      <h2 class="font-display text-4xl md:text-5xl text-[#1A1A1A] mb-4">Lookbook</h2>
+    </ScrollWithFade>
+
+    <p class="text-[#6B6B6B] text-sm mb-12">Where Nocte lives.</p>
+
+    <div class="client-component">
+      <ImageCursorTrail
+        images={[
+          { src: 'https://source.unsplash.com/600x800/?tokyo+night+editorial', id: 'tokyo', label: 'Tokyo, January' },
+          { src: 'https://source.unsplash.com/600x800/?oslo+architecture+minimal', id: 'oslo', label: 'Oslo, March' },
+          { src: 'https://source.unsplash.com/600x800/?cape+town+editorial+landscape', id: 'capetown', label: 'Cape Town, August' },
+        ]}
+      >
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          {['Tokyo, January', 'Oslo, March', 'Cape Town, August'].map((location, i) => {
+            const imgs = [
+              'https://source.unsplash.com/800x600/?tokyo+night+editorial+photo',
+              'https://source.unsplash.com/800x600/?oslo+architecture+minimal',
+              'https://source.unsplash.com/800x600/?cape+town+editorial+landscape'
+            ]
+            return (
+              <ScrollImagesReveal direction={i === 0 ? 'left' : i === 1 ? 'up' : 'right'}>
+                <div class="group cursor-pointer">
+                  <div class="overflow-hidden mb-4">
+                    <img src={imgs[i]} alt={location} class="w-full h-80 object-cover group-hover:scale-105 transition-transform duration-700" />
+                  </div>
+                  <h3 class="font-display text-xl text-[#1A1A1A]">{location}</h3>
+                  <p class="text-xs text-[#6B6B6B] tracking-[0.1em] uppercase mt-1">View story →</p>
+                </div>
+              </ScrollImagesReveal>
+            )
+          })}
+        </div>
+      </ImageCursorTrail>
+    </div>
+  </div>
+</section>

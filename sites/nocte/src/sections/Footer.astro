@@ -1,0 +1,54 @@
+---
+import { ScrollWithFade } from 'skiper-islands/scroll/ScrollWithFade'
+---
+
+<footer class="bg-[#111111] border-t border-white/10 py-16 px-6">
+  <div class="max-w-7xl mx-auto">
+    <ScrollWithFade>
+      <div class="grid grid-cols-2 md:grid-cols-3 gap-10 mb-12">
+        <div>
+          <h4 class="text-white text-xs tracking-[0.2em] uppercase font-bold mb-6">Collections</h4>
+          <ul class="space-y-3">
+            <li><a href="#" class="text-[#888888] text-sm hover:text-white transition-colors">Nox 36</a></li>
+            <li><a href="#" class="text-[#888888] text-sm hover:text-white transition-colors">Nox 40</a></li>
+            <li><a href="#" class="text-[#888888] text-sm hover:text-white transition-colors">Vigil GMT</a></li>
+            <li><a href="#" class="text-[#888888] text-sm hover:text-white transition-colors">Vigil Date</a></li>
+            <li><a href="#" class="text-[#888888] text-sm hover:text-white transition-colors">Straps</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="text-white text-xs tracking-[0.2em] uppercase font-bold mb-6">Info</h4>
+          <ul class="space-y-3">
+            <li><a href="#" class="text-[#888888] text-sm hover:text-white transition-colors">About</a></li>
+            <li><a href="#" class="text-[#888888] text-sm hover:text-white transition-colors">Lookbook</a></li>
+            <li><a href="#" class="text-[#888888] text-sm hover:text-white transition-colors">Warranty</a></li>
+            <li><a href="#" class="text-[#888888] text-sm hover:text-white transition-colors">Shipping</a></li>
+            <li><a href="#" class="text-[#888888] text-sm hover:text-white transition-colors">Returns</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="text-white text-xs tracking-[0.2em] uppercase font-bold mb-6">Follow</h4>
+          <ul class="space-y-3">
+            <li><a href="#" class="text-[#888888] text-sm hover:text-white transition-colors">Instagram</a></li>
+            <li><a href="#" class="text-[#888888] text-sm hover:text-white transition-colors">X / Twitter</a></li>
+            <li><a href="#" class="text-[#888888] text-sm hover:text-white transition-colors">YouTube</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="flex flex-col md:flex-row items-center justify-between pt-8 border-t border-white/10 gap-4">
+        <p class="text-[#6B6B6B] text-xs">
+          &copy; {new Date().getFullYear()} Nocte. All rights reserved.
+        </p>
+        <div class="flex gap-4">
+          <span class="text-[#6B6B6B] text-xs border border-white/10 px-3 py-1">Visa</span>
+          <span class="text-[#6B6B6B] text-xs border border-white/10 px-3 py-1">Mastercard</span>
+          <span class="text-[#6B6B6B] text-xs border border-white/10 px-3 py-1">Amex</span>
+          <span class="text-[#6B6B6B] text-xs border border-white/10 px-3 py-1">PayPal</span>
+        </div>
+      </div>
+    </ScrollWithFade>
+  </div>
+</footer>

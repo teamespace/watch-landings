@@ -1,0 +1,36 @@
+---
+import { ImageReveal, ScrollWithFade } from 'skiper-islands'
+---
+
+<section class="py-20 px-6 bg-[#EFEDE8]">
+  <div class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+    <ImageReveal direction="left">
+      <img
+        src="https://source.unsplash.com/600x600/?watchmaker+workshop+natural+light"
+        alt="Watchmaker workshop"
+        class="w-full h-auto object-cover"
+        loading="lazy"
+      />
+    </ImageReveal>
+    <ScrollWithFade>
+      <h2 class="font-display text-3xl md:text-4xl text-[#1C1C1A] mb-6 leading-tight">Every watch starts with a question.</h2>
+      <p class="text-[15px] leading-relaxed text-[#1C1C1A] mb-4">
+        Most watch brands start with a movement. We start with a moment: the feeling of
+        watching the sun set over the Java Sea and wondering what time it is back home.
+      </p>
+      <p class="text-[15px] leading-relaxed text-[#7A7A72] mb-8">
+        Sela is designed for people who live across time zones not because they have to,
+        but because the people they love live somewhere else. Every watch we make is a
+        translation of that feeling into something you can wear on your wrist.
+      </p>
+      <div class="flex gap-4">
+        <a href="/about" class="inline-block bg-[#C4573A] text-white px-8 py-3 text-sm font-medium tracking-wide hover:bg-[#A03E2E] transition-colors">
+          Meet the designer
+        </a>
+        <a href="/design-process" class="inline-block border border-[#1C1C1A] text-[#1C1C1A] px-8 py-3 text-sm font-medium tracking-wide hover:bg-[#1C1C1A] hover:text-white transition-colors">
+          See our process
+        </a>
+      </div>
+    </ScrollWithFade>
+  </div>
+</section>

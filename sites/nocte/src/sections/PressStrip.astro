@@ -1,0 +1,22 @@
+---
+import { RollingText } from 'skiper-islands/text/RollingText'
+import { ScrollWithFade } from 'skiper-islands/scroll/ScrollWithFade'
+---
+
+<section class="py-16 px-6 bg-[#F7F5F2]">
+  <div class="max-w-5xl mx-auto">
+    <ScrollWithFade>
+      <div class="client-component">
+        <RollingText
+          items={['Hodinkee', 'WornAndWound', 'Esquire', 'Forbes']}
+          speed={50}
+          direction="left"
+          separator=" · "
+          fontSize="14px"
+          color="#6B6B6B"
+          pauseOnHover={true}
+        />
+      </div>
+    </ScrollWithFade>
+  </div>
+</section>

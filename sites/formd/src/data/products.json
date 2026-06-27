@@ -1,0 +1,10 @@
+[
+  { "id": "linie-1", "family": "Linie", "name": "Linie 35", "price": "$580", "new": false, "type": "dress" },
+  { "id": "punkt-1", "family": "Punkt", "name": "Punkt 38", "price": "$620", "new": true, "type": "field" },
+  { "id": "raster-1", "family": "Raster", "name": "Raster 40", "price": "$780", "new": true, "type": "sport" },
+  { "id": "fuge-1", "family": "Fuge", "name": "Fuge 39", "price": "$1,200", "new": false, "type": "dress-gmt" },
+  { "id": "block-1", "family": "Block", "name": "Block 42", "price": "$950", "new": false, "type": "technical" },
+  { "id": "linie-2", "family": "Linie", "name": "Linie 33", "price": "$520", "new": false, "type": "dress" },
+  { "id": "punkt-2", "family": "Punkt", "name": "Punkt 36", "price": "$580", "new": false, "type": "field" },
+  { "id": "raster-2", "family": "Raster", "name": "Raster 42 Chrono", "price": "$1,400", "new": true, "type": "sport" }
+]

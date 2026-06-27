@@ -1,0 +1,33 @@
+---
+const reviews = [
+  { name: "Elena", location: "Berlin", text: "Bought the Arktis for my partner. He hasn't taken it off in three weeks. The green dial catches light in a way photos can't capture.", stars: 5 },
+  { name: "Marcus", location: "Melbourne", text: "Second Aevo watch. The quality keeps getting better. The Fjord feels substantial without being heavy.", stars: 5 },
+  { name: "Sofia", location: "Stockholm", text: "I've had my Sundial for 8 months. Still looks new. The leather strap aged beautifully.", stars: 4 },
+]
+---
+
+<section class="bg-[#F4F4F0] py-16 px-6">
+  <div class="max-w-5xl mx-auto">
+    <div class="text-center mb-10">
+      <p class="text-lg font-semibold text-[#111]">4.7 stars from 2,400+ customers</p>
+      <div class="flex justify-center gap-1 mt-1">
+        {[1,2,3,4,5].map(i => (
+          <svg class="w-4 h-4 text-[#E8C97E]" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        ))}
+      </div>
+    </div>
+    <div class="grid md:grid-cols-3 gap-6">
+      {reviews.map((r, i) => (
+        <div class="bg-white p-6">
+          <div class="flex gap-1 mb-3">
+            {[1,2,3,4,5].map(s => (
+              <svg class={`w-3.5 h-3.5 ${s <= r.stars ? 'text-[#E8C97E]' : 'text-gray-200'}`} viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            ))}
+          </div>
+          <p class="text-sm text-[#111] leading-relaxed mb-3">"{r.text}"</p>
+          <p class="text-xs text-[#888888]">{r.name}, {r.location}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

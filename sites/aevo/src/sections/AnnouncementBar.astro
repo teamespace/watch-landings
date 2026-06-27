@@ -1,0 +1,37 @@
+---
+const messages = [
+  "Free shipping on orders over $200",
+  "New: Summer 2026 collection",
+  "1% of every sale goes to ocean cleanup",
+]
+---
+
+<div class="announcement-bar">
+  <span id="announcement-text" class="text-white text-[13px] tracking-wide">{messages[0]}</span>
+</div>
+
+<style>
+  .announcement-bar {
+    background: #2D4A3E;
+    text-align: center;
+    padding: 8px 16px;
+    position: relative;
+    z-index: 101;
+  }
+</style>
+
+<script>
+  const messages = ["Free shipping on orders over $200", "New: Summer 2026 collection", "1% of every sale goes to ocean cleanup"]
+  let index = 0
+  const el = document.getElementById('announcement-text')
+  if (el) {
+    setInterval(() => {
+      index = (index + 1) % messages.length
+      el.style.opacity = '0'
+      setTimeout(() => {
+        el.textContent = messages[index]
+        el.style.opacity = '1'
+      }, 200)
+    }, 4000)
+  }
+</script>

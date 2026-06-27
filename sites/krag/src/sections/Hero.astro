@@ -1,0 +1,42 @@
+---
+import { Interactive3DHero } from 'skiper-islands'
+import { Text3DPerspective } from 'skiper-islands'
+---
+
+<section class="relative h-screen w-full overflow-hidden bg-black">
+  <img
+    src="https://source.unsplash.com/1920x1080/?mountain+landscape+dramatic"
+    alt="Terrain background"
+    class="absolute inset-0 w-full h-full object-cover"
+  />
+  <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent" />
+
+  <Interactive3DHero client:load>
+    <div class="relative z-10 flex flex-col items-center justify-center h-full text-center px-4">
+      <Text3DPerspective
+        client:load
+        text="RIDGE 40 GMT MKII"
+        color="#FFFFFF"
+        fontSize="clamp(2.5rem, 7vw, 6rem)"
+        fontWeight={700}
+      />
+      <p class="text-white/80 text-lg mt-4 max-w-xl mx-auto tracking-wide">
+        Dual timezone. 200m water resistance. Built to leave the city behind.
+      </p>
+      <div class="flex gap-4 mt-8">
+        <a
+          href="/collections/ridge-40-gmt"
+          class="px-8 py-3 border border-white text-white text-sm uppercase tracking-widest hover:bg-white hover:text-black transition-colors"
+        >
+          Discover
+        </a>
+        <a
+          href="/products/krag-1"
+          class="px-8 py-3 bg-[#3B5E3A] text-white text-sm uppercase tracking-widest hover:bg-[#2d4a2d] transition-colors"
+        >
+          Buy now ($680)
+        </a>
+      </div>
+    </div>
+  </Interactive3DHero>
+</section>

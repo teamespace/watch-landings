@@ -1,0 +1,29 @@
+---
+import { ScrollWithFade } from 'skiper-islands/scroll/ScrollWithFade'
+---
+
+<section class="py-24 px-6 bg-[#111111]">
+  <div class="max-w-xl mx-auto text-center">
+    <ScrollWithFade>
+      <h2 class="font-display text-4xl md:text-5xl text-white mb-4">Get in early.</h2>
+    </ScrollWithFade>
+
+    <p class="text-[#aaaaaa] text-sm mb-10 max-w-sm mx-auto">
+      New releases, quiet drops, and the occasional invite. No filler.
+    </p>
+
+    <form class="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
+      <input
+        type="email"
+        placeholder="Your email"
+        class="flex-1 bg-transparent border border-white/20 px-5 py-3 text-white text-sm placeholder:text-[#6B6B6B] focus:outline-none focus:border-[#C9A96E] transition-colors"
+      />
+      <button
+        type="submit"
+        class="bg-[#C9A96E] text-white px-8 py-3 text-sm tracking-[0.2em] uppercase hover:bg-[#b8944f] transition-colors"
+      >
+        Join
+      </button>
+    </form>
+  </div>
+</section>

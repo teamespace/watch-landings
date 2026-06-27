@@ -1,0 +1,10 @@
+[
+  { "id": "gmt-transit-dusk", "collection": "GMT Transit", "name": "GMT Transit Dusk", "price": "$420", "new": true },
+  { "id": "gmt-transit-dawn", "collection": "GMT Transit", "name": "GMT Transit Dawn", "price": "$420", "new": true },
+  { "id": "kronosprinter", "collection": "Kronosprinter", "name": "Kronosprinter", "price": "$390", "new": false },
+  { "id": "meca-quartz", "collection": "Meca", "name": "Meca Quartz", "price": "$290", "new": false },
+  { "id": "astronomer", "collection": "Astronomer", "name": "Astronomer", "price": "$550", "new": true },
+  { "id": "zenga", "collection": "Zenga", "name": "Zenga", "price": "$340", "new": false },
+  { "id": "pagi", "collection": "Pa:Gi", "name": "Pa:Gi", "price": "$320", "new": false },
+  { "id": "sore", "collection": "So:Re", "name": "So:Re", "price": "$320", "new": false }
+]

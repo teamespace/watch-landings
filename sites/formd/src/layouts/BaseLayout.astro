@@ -1,0 +1,34 @@
+---
+import '@fontsource/dm-sans/400.css'
+import '@fontsource/dm-sans/700.css'
+import '../styles/global.css'
+
+interface Props {
+  title?: string
+  description?: string
+  themeColor?: string
+}
+
+const { title = 'Formd — Form is the argument.', description = '', themeColor = '#FFFFFF' } = Astro.props
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content={themeColor} />
+    <meta name="description" content={description} />
+    <title>{title}</title>
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  </head>
+  <body class="font-body antialiased">
+    <slot />
+  </body>
+</html>
+
+<style>
+  html {
+    scroll-behavior: smooth;
+  }
+</style>

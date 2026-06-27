@@ -1,0 +1,54 @@
+---
+import { TextRevealBox } from 'skiper-islands/text/TextRevealBox'
+import { HorizontalTextReveal } from 'skiper-islands/text/HorizontalTextReveal'
+import { MouseFollowAnimations } from 'skiper-islands/effects/MouseFollowAnimations'
+import { ParallaxImage } from 'skiper-islands/effects/ParallaxImage'
+---
+
+<section class="min-h-screen bg-[#111111] relative overflow-hidden" style="background-image: url('data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22200%22 height=%22200%22 opacity=%220.03%22%3E%3Cfilter id=%22n%22%3E%3CfeTurbulence type=%22fractalNoise%22 baseFrequency=%220.65%22 numOctaves=%223%22/%3E%3C/filter%3E%3Crect width=%22100%25%22 height=%22100%25%22 filter=%22url(%23n)%22/%3E%3C/svg%3E'); background-size: 200px;">
+  <div class="flex flex-col md:flex-row min-h-screen">
+    <div class="w-full md:w-[60%] h-[50vh] md:min-h-screen overflow-hidden">
+      <MouseFollowAnimations maxShift={12} className="h-full">
+        <ParallaxImage depth={0.15}>
+          <img
+            src="https://source.unsplash.com/800x1000/?watch+wrist+dark+moody"
+            alt="Nocte watch on wrist"
+            class="w-full h-full object-cover"
+          />
+        </ParallaxImage>
+      </MouseFollowAnimations>
+    </div>
+
+    <div class="w-full md:w-[40%] flex flex-col justify-center px-8 md:px-16 py-16 md:py-0">
+      <TextRevealBox
+        text="Something you'll wear for the next ten years."
+        as="h1"
+        color="#ffffff"
+        fontSize="clamp(2.5rem, 5vw, 4.5rem)"
+        fontWeight={700}
+        delay={0.2}
+        style={{ fontFamily: 'Cormorant Garamond, Georgia, serif' }}
+      />
+
+      <div class="mt-6">
+        <HorizontalTextReveal
+          text="Nocte watches are designed with one question in mind: does it still make sense in a decade?"
+          as="p"
+          color="#aaaaaa"
+          fontSize="15px"
+          fontWeight={400}
+          delay={0.6}
+        />
+      </div>
+
+      <div class="mt-10">
+        <a
+          href="#collections"
+          class="inline-block border border-[#C9A96E] text-[#C9A96E] px-10 py-3 text-sm tracking-[0.2em] uppercase hover:bg-[#C9A96E] hover:text-[#111111] transition-colors duration-300"
+        >
+          Shop the collection
+        </a>
+      </div>
+    </div>
+  </div>
+</section>

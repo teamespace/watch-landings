@@ -1,0 +1,8 @@
+[
+  { "id": "krag-1", "collection": "Ridge 40 GMT", "name": "Ridge 40 GMT MKII", "price": "$680", "new": true, "spec": "Dual timezone. 200m water resistance." },
+  { "id": "krag-2", "collection": "Cairn 38 Field", "name": "Cairn 38 Field", "price": "$490", "new": false, "spec": "Swiss mechanical. 80hr power reserve." },
+  { "id": "krag-3", "collection": "Summit 36 Dress", "name": "Summit 36 Dress", "price": "$420", "new": false, "spec": "Ultra-thin. Sapphire crystal." },
+  { "id": "krag-4", "collection": "Traverse 39 Dive", "name": "Traverse 39 Dive", "price": "$780", "new": true, "spec": "300m water. Helium valve." },
+  { "id": "krag-5", "collection": "Plateau 37", "name": "Plateau 37", "price": "$550", "new": false, "spec": "GMT. Bronze case." },
+  { "id": "krag-6", "collection": "Crag 38 GMT", "name": "Crag 38 GMT", "price": "$720", "new": true, "spec": "Dual timezone. Titanium." }
+]

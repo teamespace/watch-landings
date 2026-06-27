@@ -1,0 +1,17 @@
+---
+import { ScrollImagesReveal } from 'skiper-islands/reveal/ScrollImagesReveal'
+import { ScrollWithFade } from 'skiper-islands/scroll/ScrollWithFade'
+import { CollectionCards } from '../components/CollectionCards'
+---
+
+<section id="collections" class="py-24 px-6 bg-[#F7F5F2]">
+  <div class="max-w-7xl mx-auto">
+    <ScrollWithFade>
+      <h2 class="font-display text-4xl md:text-5xl text-[#1A1A1A] mb-16">The collections</h2>
+    </ScrollWithFade>
+
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+      <CollectionCards client:load />
+    </div>
+  </div>
+</section>

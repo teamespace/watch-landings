@@ -1,0 +1,29 @@
+---
+import { RollingText } from 'skiper-islands'
+---
+
+<section class="py-24 px-6 bg-white">
+  <div class="max-w-4xl mx-auto text-center">
+    <p class="text-xs uppercase tracking-[0.2em] text-brand-text-secondary mb-12">As seen in</p>
+
+    <RollingText
+      client:visible
+      items={["Hodinkee","WornAndWound","Fratello","ABlogToWatch","Watchfinder"]}
+      speed={40}
+      color="#5A5A5A"
+      fontSize="16px"
+    />
+
+    <div class="mt-16 space-y-8">
+      {[
+        { quote: "The Cairn 38 hits all the basics without trying too hard. A rare thing.", source: "WornAndWound" },
+        { quote: "Krag's Ridge 40 GMT offers dual-timezone utility at a price that doesn't punish.", source: "Hodinkee" },
+      ].map((item) => (
+        <blockquote class="text-brand-primary text-lg md:text-xl italic leading-relaxed max-w-2xl mx-auto">
+          &ldquo;{item.quote}&rdquo;
+          <cite class="block text-sm not-italic text-brand-text-secondary mt-2">— {item.source}</cite>
+        </blockquote>
+      ))}
+    </div>
+  </div>
+</section>

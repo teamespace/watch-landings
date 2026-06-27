@@ -1,0 +1,37 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro'
+import Nav from '../sections/Nav.astro'
+import HeroBanner from '../sections/HeroBanner.astro'
+import FeaturedProducts from '../sections/FeaturedProducts.astro'
+import CollectionsNav from '../sections/CollectionsNav.astro'
+import BrandStoryTeaser from '../sections/BrandStoryTeaser.astro'
+import DesignProcessCallout from '../sections/DesignProcessCallout.astro'
+import GMTFeature from '../sections/GMTFeature.astro'
+import EventPublication from '../sections/EventPublication.astro'
+import Accessories from '../sections/Accessories.astro'
+import Newsletter from '../sections/Newsletter.astro'
+import Footer from '../sections/Footer.astro'
+import { WordsPreloader } from 'skiper-islands'
+---
+
+<BaseLayout>
+  <WordsPreloader
+    words={['Pagi', 'Siang', 'Sore', 'Senja', 'Malam']}
+    bgColor="#FAF8F4"
+    textColor="#1C1C1A"
+    client:load
+  />
+  <Nav />
+  <main>
+    <HeroBanner />
+    <FeaturedProducts />
+    <CollectionsNav />
+    <BrandStoryTeaser />
+    <DesignProcessCallout />
+    <GMTFeature />
+    <EventPublication />
+    <Accessories />
+    <Newsletter />
+  </main>
+  <Footer />
+</BaseLayout>

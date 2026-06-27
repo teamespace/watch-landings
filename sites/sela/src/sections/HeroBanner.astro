@@ -1,0 +1,60 @@
+---
+import { OliverParallax, SienaParallax } from 'skiper-islands'
+
+const slides = [
+  {
+    id: 'dusk',
+    img: 'https://source.unsplash.com/1200x600/?watch+tropical+beach+wrist',
+    collection: 'GMT Transit Dusk',
+    tagline: 'A watch that knows what time it is wherever you are.',
+    cta: 'Discover',
+    parallax: 'oliver',
+  },
+  {
+    id: 'dawn',
+    img: 'https://source.unsplash.com/1200x600/?gmt+watch+travel+editorial',
+    collection: 'GMT Transit Dawn',
+    tagline: 'First light. Any time zone.',
+    cta: 'Discover',
+    parallax: 'siena',
+  },
+  {
+    id: 'sunset',
+    img: 'https://source.unsplash.com/1200x600/?watch+sunset+warm+light',
+    collection: 'Astronomer',
+    tagline: 'Built for the hours between here and there.',
+    cta: 'Explore',
+    parallax: 'oliver',
+  },
+]
+---
+
+<section class="w-full">
+  {slides.map((slide) => {
+    const ParallaxComponent = slide.parallax === 'siena' ? SienaParallax : OliverParallax
+    return (
+      <ParallaxComponent>
+        <div class="w-full h-[65vh] md:h-[75vh] relative">
+          <img
+            src={slide.img}
+            alt={slide.collection}
+            class="w-full h-full object-cover"
+            loading="lazy"
+          />
+        </div>
+      </ParallaxComponent>
+    )
+  })}
+  {slides.slice(0, 1).map((slide) => (
+    <div class="py-10 px-6 max-w-4xl mx-auto text-center">
+      <p class="text-[11px] uppercase tracking-[0.2em] text-[#7A7A72] mb-3">{slide.collection}</p>
+      <p class="text-lg md:text-xl text-[#1C1C1A] mb-6 leading-relaxed max-w-2xl mx-auto">{slide.tagline}</p>
+      <a
+        href="/collections/gmt-transit"
+        class="inline-block bg-[#C4573A] text-white px-10 py-3 text-sm font-medium tracking-wide hover:bg-[#A03E2E] transition-colors"
+      >
+        {slide.cta}
+      </a>
+    </div>
+  ))}
+</section>

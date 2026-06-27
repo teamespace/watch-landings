@@ -1,0 +1,10 @@
+[
+  { "id": "nox-36", "collection": "Nox", "name": "Nox 36", "price": "$680", "new": false },
+  { "id": "nox-40", "collection": "Nox", "name": "Nox 40", "price": "$780", "new": true },
+  { "id": "vigil-gmt", "collection": "Vigil", "name": "Vigil GMT", "price": "$1,200", "new": true },
+  { "id": "vigil-date", "collection": "Vigil", "name": "Vigil Date", "price": "$920", "new": false },
+  { "id": "strap-calf", "name": "Calf Leather Strap", "price": "$80", "type": "strap" },
+  { "id": "strap-suede", "name": "Suede Strap", "price": "$65", "type": "strap" },
+  { "id": "strap-canvas", "name": "Canvas Strap", "price": "$45", "type": "strap" },
+  { "id": "strap-steel", "name": "Steel Bracelet", "price": "$150", "type": "strap" }
+]

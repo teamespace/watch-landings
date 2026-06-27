@@ -1,0 +1,33 @@
+---
+import { ScrollWithFade } from 'skiper-islands/scroll/ScrollWithFade'
+import { ReviewStack } from '../components/ReviewStack'
+---
+
+<section class="py-24 px-6 bg-[#F7F5F2]">
+  <div class="max-w-4xl mx-auto">
+    <ScrollWithFade>
+      <h2 class="font-display text-4xl text-[#1A1A1A] mb-4 text-center">From the people who wear them.</h2>
+    </ScrollWithFade>
+
+    <p class="text-center text-[#6B6B6B] text-sm mb-16">Not scripted. Not paid. Just honest.</p>
+
+    <div class="hidden md:block">
+      <ReviewStack client:load />
+    </div>
+
+    <div class="flex md:hidden overflow-x-auto gap-4 pb-4">
+      {[
+        { stars: '★★★★★', name: 'Marcus', text: "I've had my Nox 36 for about eight months now. It's on my wrist every day. The size is perfect for my 6.5-inch wrist." },
+        { stars: '★★★★★', name: 'Samira', text: "Was between this and a Seiko for months. Glad I went with the Vigil. The lume is incredible — lasts all night." },
+        { stars: '★★★★☆', name: 'David', text: "Bought the Vigil GMT for a trip to Japan. The second time zone is actually useful." },
+        { stars: '★★★★★', name: 'Elena', text: "This is my first proper watch. It felt smaller and more elegant than the photos suggested. Exactly what I wanted." },
+      ].map((r) => (
+        <div class="min-w-[280px] bg-white p-6 rounded-none">
+          <div class="text-[#C9A96E] text-sm mb-2">{r.stars}</div>
+          <p class="text-[#6B6B6B] text-sm leading-relaxed mb-2">{r.text}</p>
+          <span class="text-xs font-bold text-[#1A1A1A] tracking-wider uppercase">— {r.name}</span>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

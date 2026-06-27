@@ -1,0 +1,25 @@
+---
+import { ScrollImagesReveal } from 'skiper-islands'
+---
+
+<section class="relative h-[500px] overflow-hidden">
+  <div
+    class="absolute inset-0 bg-cover bg-center"
+    style="background-image: url('https://source.unsplash.com/1920x600/?ocean+plastic+beach')"
+  />
+  <div class="absolute inset-0 bg-black/50" />
+  <ScrollImagesReveal direction="up">
+    <div class="relative z-10 flex flex-col justify-center items-center h-full text-center text-white px-6 max-w-2xl mx-auto">
+      <h2 class="text-3xl md:text-4xl font-bold lowercase mb-4">Made from recycled ocean plastic. For real.</h2>
+      <p class="text-sm md:text-base text-white/80 mb-6 leading-relaxed">
+        We partnered with the Marine Conservation Society to turn ocean-bound plastic into watch straps that look good and do good. Each purchase funds a kilo of plastic pulled from the sea.
+      </p>
+      <a
+        href="/collabs"
+        class="inline-block border border-white text-white px-8 py-3 text-sm font-medium lowercase hover:bg-white hover:text-[#111] transition-colors"
+      >
+        Explore the collab
+      </a>
+    </div>
+  </ScrollImagesReveal>
+</section>

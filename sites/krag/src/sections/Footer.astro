@@ -1,0 +1,56 @@
+---
+---
+
+<footer class="py-16 px-6 bg-white border-t border-gray-200">
+  <div class="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-8">
+    <div>
+      <p class="text-xs uppercase tracking-[0.15em] text-brand-text-secondary mb-4">Watches</p>
+      <ul class="space-y-2">
+        {['Ridge 40 GMT', 'Cairn 38 Field', 'Summit 36 Dress', 'Traverse 39 Dive', 'Plateau 37', 'Crag 38 GMT'].map((item) => (
+          <li><a href={`/collections/${item.toLowerCase().replace(/\s+/g, '-')}`} class="text-sm text-brand-primary hover:text-brand-text-secondary transition-colors">{item}</a></li>
+        ))}
+      </ul>
+    </div>
+    <div>
+      <p class="text-xs uppercase tracking-[0.15em] text-brand-text-secondary mb-4">About</p>
+      <ul class="space-y-2">
+        {['Our Story', 'Quality', 'Materials', 'Careers'].map((item) => (
+          <li><a href={`/${item.toLowerCase().replace(/\s+/g, '-')}`} class="text-sm text-brand-primary hover:text-brand-text-secondary transition-colors">{item}</a></li>
+        ))}
+      </ul>
+    </div>
+    <div>
+      <p class="text-xs uppercase tracking-[0.15em] text-brand-text-secondary mb-4">Support</p>
+      <ul class="space-y-2">
+        {['Warranty', 'Shipping', 'Returns', 'Contact', 'FAQ'].map((item) => (
+          <li><a href={`/${item.toLowerCase()}`} class="text-sm text-brand-primary hover:text-brand-text-secondary transition-colors">{item}</a></li>
+        ))}
+      </ul>
+    </div>
+    <div>
+      <p class="text-xs uppercase tracking-[0.15em] text-brand-text-secondary mb-4">Follow</p>
+      <ul class="space-y-2">
+        {['Instagram', 'YouTube', 'Twitter'].map((item) => (
+          <li><a href="#" class="text-sm text-brand-primary hover:text-brand-text-secondary transition-colors">{item}</a></li>
+        ))}
+      </ul>
+      <div class="mt-8">
+        <p class="text-xs text-brand-text-secondary">$ USD</p>
+      </div>
+    </div>
+  </div>
+  <div class="max-w-7xl mx-auto mt-12 pt-8 border-t border-gray-200 flex flex-col md:flex-row justify-between items-center gap-4">
+    <div class="flex gap-4">
+      {['Visa', 'Mastercard', 'Amex', 'PayPal'].map((item) => (
+        <span class="text-xs text-brand-text-secondary">{item}</span>
+      ))}
+    </div>
+    <p class="text-xs text-brand-text-secondary">
+      © {new Date().getFullYear()} Krag. Built for where roads end.
+    </p>
+    <div class="flex gap-4 text-xs text-brand-text-secondary">
+      <a href="/privacy">Privacy</a>
+      <a href="/terms">Terms</a>
+    </div>
+  </div>
+</footer>
