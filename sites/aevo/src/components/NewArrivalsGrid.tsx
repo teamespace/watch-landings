@@ -20,7 +20,7 @@ export function NewArrivalsGrid({ products }: { products: Product[] }) {
             <div className="group cursor-pointer">
               <div className="aspect-square bg-[#F4F4F0] mb-3 overflow-hidden relative">
                 <img
-                  src={`https://source.unsplash.com/400x400/?watch+product+${p.name}`}
+                  src={`https://picsum.photos/seed/watch+product+/400/400${p.name}`}
                   alt={p.name}
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                   loading="lazy"

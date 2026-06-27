@@ -30,7 +30,7 @@ export function BestsellersCarousel({ products }: { products: Product[] }) {
             <div className="p-0">
               <div className="aspect-square bg-[#F4F4F0] overflow-hidden">
                 <img
-                  src={`https://source.unsplash.com/400x400/?watch+minimal+${p.name}`}
+                  src={`https://picsum.photos/seed/watch+minimal+/400/400${p.name}`}
                   alt={p.name}
                   className="w-full h-full object-cover"
                   loading="lazy"

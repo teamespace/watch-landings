@@ -10,7 +10,7 @@ const newProducts = products.filter(p => p.new)
       <div class="group cursor-pointer animate-fade-in" style={`animation-delay: ${i * 0.1}s`}>
         <div class="aspect-square bg-[#EFEDE8] mb-3 overflow-hidden relative">
           <img
-            src={`https://source.unsplash.com/400x400/?watch+warm+cream+background+${encodeURIComponent(p.name)}`}
+            src={`https://picsum.photos/seed/watch+warm+cream+background+/400/400${encodeURIComponent(p.name)}`}
             alt={p.name}
             class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
             loading="lazy"

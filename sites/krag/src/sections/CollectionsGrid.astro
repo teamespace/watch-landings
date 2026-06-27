@@ -17,7 +17,7 @@ import products from '../data/products.json'
         >
           <div class="aspect-square overflow-hidden">
             <img
-              src={`https://source.unsplash.com/600x600/?watch+${encodeURIComponent(product.collection.split(' ').slice(-1)[0].toLowerCase())}`}
+              src={`https://picsum.photos/seed/watch+/600/600${encodeURIComponent(product.collection.split(' ').slice(-1)[0].toLowerCase())}`}
               alt={product.collection}
               class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
             />

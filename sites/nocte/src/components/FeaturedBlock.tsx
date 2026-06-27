@@ -8,7 +8,7 @@ export function FeaturedBlock() {
       body="Japanese Miyota 9015 movement, 42-hour power reserve. 316L stainless steel case, 40mm diameter, 100m water resistance. Sapphire crystal with double AR coating."
       mediaSlot={
         <img
-          src="https://source.unsplash.com/600x700/?watch+leather+strap+ambient"
+          src="https://picsum.photos/seed/watch+leather+strap+ambient/600/700"
           alt="Featured Nocte watch"
           className="w-full h-full object-cover"
         />

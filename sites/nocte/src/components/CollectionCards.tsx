@@ -1,10 +1,10 @@
 import { ExpandOnHover } from 'skiper-islands/card/ExpandOnHover'
 
 const collections = [
-  { id: 'nox-36', name: 'Nox 36', price: '$680', img: 'https://source.unsplash.com/400x400/?watch+minimal+dark' },
-  { id: 'nox-40', name: 'Nox 40', price: '$780', img: 'https://source.unsplash.com/400x400/?watch+product+black' },
-  { id: 'vigil-gmt', name: 'Vigil GMT', price: '$1,200', img: 'https://source.unsplash.com/400x400/?watch+steel+strap' },
-  { id: 'vigil-date', name: 'Vigil Date', price: '$920', img: 'https://source.unsplash.com/400x400/?watch+leather+classic' },
+  { id: 'nox-36', name: 'Nox 36', price: '$680', img: 'https://picsum.photos/seed/watch+minimal+dark/400/400' },
+  { id: 'nox-40', name: 'Nox 40', price: '$780', img: 'https://picsum.photos/seed/watch+product+black/400/400' },
+  { id: 'vigil-gmt', name: 'Vigil GMT', price: '$1,200', img: 'https://picsum.photos/seed/watch+steel+strap/400/400' },
+  { id: 'vigil-date', name: 'Vigil Date', price: '$920', img: 'https://picsum.photos/seed/watch+leather+classic/400/400' },
 ]
 
 export function CollectionCards() {

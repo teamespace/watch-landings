@@ -15,17 +15,17 @@ import { ScrollWithFade } from 'skiper-islands/scroll/ScrollWithFade'
     <div class="client-component">
       <ImageCursorTrail
         images={[
-          { src: 'https://source.unsplash.com/600x800/?tokyo+night+editorial', id: 'tokyo', label: 'Tokyo, January' },
-          { src: 'https://source.unsplash.com/600x800/?oslo+architecture+minimal', id: 'oslo', label: 'Oslo, March' },
-          { src: 'https://source.unsplash.com/600x800/?cape+town+editorial+landscape', id: 'capetown', label: 'Cape Town, August' },
+          { src: 'https://picsum.photos/seed/tokyo+night+editorial/600/800', id: 'tokyo', label: 'Tokyo, January' },
+          { src: 'https://picsum.photos/seed/oslo+architecture+minimal/600/800', id: 'oslo', label: 'Oslo, March' },
+          { src: 'https://picsum.photos/seed/cape+town+editorial+landscape/600/800', id: 'capetown', label: 'Cape Town, August' },
         ]}
       >
         <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
           {['Tokyo, January', 'Oslo, March', 'Cape Town, August'].map((location, i) => {
             const imgs = [
-              'https://source.unsplash.com/800x600/?tokyo+night+editorial+photo',
-              'https://source.unsplash.com/800x600/?oslo+architecture+minimal',
-              'https://source.unsplash.com/800x600/?cape+town+editorial+landscape'
+              'https://picsum.photos/seed/tokyo+night+editorial+photo/800/600',
+              'https://picsum.photos/seed/oslo+architecture+minimal/800/600',
+              'https://picsum.photos/seed/cape+town+editorial+landscape/800/600'
             ]
             return (
               <ScrollImagesReveal direction={i === 0 ? 'left' : i === 1 ? 'up' : 'right'}>
