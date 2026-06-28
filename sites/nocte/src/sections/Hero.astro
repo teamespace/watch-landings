@@ -1,6 +1,4 @@
 ---
-import { TextRevealBox } from 'skiper-islands/text/TextRevealBox'
-import { HorizontalTextReveal } from 'skiper-islands/text/HorizontalTextReveal'
 import { MouseFollowAnimations } from 'skiper-islands/effects/MouseFollowAnimations'
 import { ParallaxImage } from 'skiper-islands/effects/ParallaxImage'
 ---
@@ -27,29 +25,18 @@ import { ParallaxImage } from 'skiper-islands/effects/ParallaxImage'
     </div>
 
     <div class="w-full md:w-[40%] flex flex-col justify-center px-8 md:px-16 lg:px-24 py-20 md:py-0 pt-24 md:pt-0">
-      <TextRevealBox
-        text="Something you'll wear for the next ten years."
-        as="h1"
-        color="#ffffff"
-        fontSize="clamp(3rem, 6vw, 5.5rem)"
-        fontWeight={600}
-        delay={0.2}
-        style={{ fontFamily: 'Cormorant Garamond, Georgia, serif', lineHeight: 1.05 }}
-      />
+      <h1
+        class="font-display text-white text-[clamp(2.75rem,5.5vw,5rem)] leading-[1.05] font-semibold animate-fade-in-up"
+        style="font-family: 'Cormorant Garamond', Georgia, serif;"
+      >
+        Something you'll wear for the next ten years.
+      </h1>
 
-      <div class="mt-8 max-w-md">
-        <HorizontalTextReveal
-          text="Nocte watches are designed with one question in mind: does it still make sense in a decade?"
-          as="p"
-          color="#a0a0a0"
-          fontSize="15px"
-          fontWeight={400}
-          delay={0.6}
-          style={{ lineHeight: 1.7 }}
-        />
-      </div>
+      <p class="mt-8 max-w-md text-[15px] leading-[1.7] text-[#a0a0a0] animate-fade-in-up" style="animation-delay: 0.2s;">
+        Nocte watches are designed with one question in mind: does it still make sense in a decade?
+      </p>
 
-      <div class="mt-12">
+      <div class="mt-12 animate-fade-in-up" style="animation-delay: 0.4s;">
         <a href="#collections" class="btn-primary">Shop the collection</a>
       </div>
     </div>
