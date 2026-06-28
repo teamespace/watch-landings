@@ -5,11 +5,11 @@ import { NewArrivalsGrid } from '../components/NewArrivalsGrid.tsx'
 const newProducts = products.filter(p => p.new)
 ---
 
-<section class="py-16 px-6 max-w-6xl mx-auto">
-  <h2 class="text-3xl font-bold lowercase mb-8">Just dropped</h2>
+<section class="py-20 md:py-28 px-6 max-w-7xl mx-auto">
+  <h2 class="text-4xl md:text-5xl font-bold lowercase tracking-tight mb-12">Just dropped</h2>
   <NewArrivalsGrid products={newProducts} client:visible />
-  <div class="mt-10 text-center">
-    <a href="/watches" class="inline-block border border-[#111] text-[#111] px-8 py-3 text-sm font-medium lowercase hover:bg-[#111] hover:text-white transition-colors">
+  <div class="mt-14 text-center">
+    <a href="/watches" class="btn-secondary">
       See all new watches
     </a>
   </div>

@@ -1,6 +1,7 @@
 ---
 import '../styles/global.css'
 import '@fontsource/dm-sans/400.css'
+import '@fontsource/dm-sans/500.css'
 import '@fontsource/dm-sans/700.css'
 
 interface Props {
@@ -22,7 +23,7 @@ const { title = 'Aevo — Designed for a life in motion', description = '', them
     <title>{title}</title>
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
   </head>
-  <body class="font-body antialiased">
+  <body class="font-body antialiased text-[15px] leading-[1.65] text-brand-primary">
     <slot />
   </body>
 </html>

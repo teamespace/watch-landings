@@ -1,42 +1,52 @@
 ---
-import { Interactive3DHero } from 'skiper-islands'
 import { Text3DPerspective } from 'skiper-islands'
 ---
 
-<section class="relative h-screen w-full overflow-hidden bg-black">
+<section class="relative h-[95vh] min-h-[600px] w-full overflow-hidden bg-black">
   <img
     src="https://picsum.photos/seed/mountain+landscape+dramatic/1920/1080"
     alt="Terrain background"
     class="absolute inset-0 w-full h-full object-cover"
   />
-  <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent" />
+  <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-black/20" />
 
-  <Interactive3DHero client:load>
-    <div class="relative z-10 flex flex-col items-center justify-center h-full text-center px-4">
+  <div class="relative z-10 flex flex-col items-center justify-end md:justify-center h-full text-center px-6 pb-24 md:pb-0">
+    <span class="kicker mb-5">New Release</span>
+
+    <div class="hero-title">
       <Text3DPerspective
         client:load
         text="RIDGE 40 GMT MKII"
         color="#FFFFFF"
-        fontSize="clamp(2.5rem, 7vw, 6rem)"
+        fontSize="clamp(2.8rem, 9vw, 7rem)"
         fontWeight={700}
       />
-      <p class="text-white/80 text-lg mt-4 max-w-xl mx-auto tracking-wide">
-        Dual timezone. 200m water resistance. Built to leave the city behind.
-      </p>
-      <div class="flex gap-4 mt-8">
-        <a
-          href="/collections/ridge-40-gmt"
-          class="px-8 py-3 border border-white text-white text-sm uppercase tracking-widest hover:bg-white hover:text-black transition-colors"
-        >
-          Discover
-        </a>
-        <a
-          href="/products/krag-1"
-          class="px-8 py-3 bg-[#3B5E3A] text-white text-sm uppercase tracking-widest hover:bg-[#2d4a2d] transition-colors"
-        >
-          Buy now ($680)
-        </a>
-      </div>
     </div>
-  </Interactive3DHero>
+
+    <p class="mt-6 text-white/80 text-base md:text-lg max-w-xl mx-auto tracking-wide leading-relaxed">
+      Dual timezone. 200m water resistance. Built to leave the city behind.
+    </p>
+
+    <div class="mt-6 flex flex-wrap justify-center gap-2">
+      {['40mm case', 'GMT', '200m WR', 'Sapphire'].map((spec) => (
+        <span class="spec-pill">{spec}</span>
+      ))}
+    </div>
+
+    <div class="mt-10 flex flex-col sm:flex-row gap-4">
+      <a href="/collections/ridge-40-gmt" class="btn-ghost-light">
+        Discover
+      </a>
+      <a href="/products/krag-1" class="btn-primary">
+        Buy now — $680
+      </a>
+    </div>
+  </div>
 </section>
+
+<style>
+  .hero-title h1 {
+    letter-spacing: 0.04em !important;
+    line-height: 0.95 !important;
+  }
+</style>

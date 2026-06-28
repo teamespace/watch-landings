@@ -3,16 +3,16 @@ import { RollingText } from 'skiper-islands/text/RollingText'
 import { ScrollWithFade } from 'skiper-islands/scroll/ScrollWithFade'
 ---
 
-<section class="py-16 px-6 bg-[#F7F5F2]">
-  <div class="max-w-5xl mx-auto">
+<section class="py-10 px-6 bg-[#F7F5F2] border-y border-[#1A1A1A]/10">
+  <div class="max-w-6xl mx-auto">
     <ScrollWithFade>
       <div class="client-component">
         <RollingText
           items={['Hodinkee', 'WornAndWound', 'Esquire', 'Forbes']}
-          speed={50}
+          speed={30}
           direction="left"
           separator=" · "
-          fontSize="14px"
+          fontSize="12px"
           color="#6B6B6B"
           pauseOnHover={true}
         />

@@ -2,22 +2,22 @@
 import { ThreeDRollingText, HorizontalTextReveal } from 'skiper-islands'
 ---
 
-<section class="bg-white py-24 px-6 md:px-12">
-  <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center">
-    <div>
+<section class="bg-white py-20 md:py-32 px-6 md:px-10 lg:px-16 border-b border-brand-grid">
+  <div class="max-w-[1440px] mx-auto grid md:grid-cols-2 gap-12 md:gap-8 items-center">
+    <div class="max-w-2xl">
       <ThreeDRollingText
         text="Bringing one idea further: Punkt 38 Update"
         as="h1"
-        fontSize="clamp(2rem, 5vw, 3.5rem)"
+        fontSize="clamp(2.5rem, 6vw, 4.75rem)"
         fontWeight={700}
         color="#0A0A0A"
         delay={0.1}
       />
-      <div class="mt-6">
+      <div class="mt-8 md:mt-10">
         <HorizontalTextReveal
           text="A mechanical movement redesigned from the ground up. Available now."
           as="p"
-          fontSize="clamp(1rem, 1.5vw, 1.25rem)"
+          fontSize="clamp(1rem, 1.4vw, 1.25rem)"
           fontWeight={400}
           color="#666666"
           delay={0.3}
@@ -25,17 +25,19 @@ import { ThreeDRollingText, HorizontalTextReveal } from 'skiper-islands'
       </div>
       <a
         href="/watches/punkt-38"
-        class="inline-block mt-8 px-8 py-3 bg-[#CC2200] text-white text-sm font-medium uppercase tracking-wider"
+        class="inline-block mt-10 md:mt-12 px-8 py-3.5 bg-brand-accent text-white text-label font-medium hover:bg-[#B31E00] transition-colors duration-300"
       >
         Discover now
       </a>
     </div>
-    <div class="flex justify-center">
-      <img
-        src="https://picsum.photos/seed/watch+white+background+minimal/600/600"
-        alt="Punkt 38"
-        class="w-full max-w-md"
-      />
+    <div class="flex justify-center md:justify-end">
+      <div class="relative w-full max-w-lg aspect-square bg-brand-surface flex items-center justify-center">
+        <img
+          src="https://picsum.photos/seed/watch+white+background+minimal/600/600"
+          alt="Punkt 38"
+          class="w-[85%] h-[85%] object-contain"
+        />
+      </div>
     </div>
   </div>
 </section>

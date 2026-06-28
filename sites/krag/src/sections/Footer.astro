@@ -1,56 +1,78 @@
 ---
 ---
 
-<footer class="py-16 px-6 bg-white border-t border-gray-200">
-  <div class="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-8">
+<footer class="py-16 md:py-20 px-6 bg-white border-t border-brand-primary/10">
+  <div class="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-10">
     <div>
-      <p class="text-xs uppercase tracking-[0.15em] text-brand-text-secondary mb-4">Watches</p>
-      <ul class="space-y-2">
+      <p class="section-label mb-5">Watches</p>
+      <ul class="space-y-3">
         {['Ridge 40 GMT', 'Cairn 38 Field', 'Summit 36 Dress', 'Traverse 39 Dive', 'Plateau 37', 'Crag 38 GMT'].map((item) => (
-          <li><a href={`/collections/${item.toLowerCase().replace(/\s+/g, '-')}`} class="text-sm text-brand-primary hover:text-brand-text-secondary transition-colors">{item}</a></li>
+          <li>
+            <a
+              href={`/collections/${item.toLowerCase().replace(/\s+/g, '-')}`}
+              class="text-sm text-brand-primary hover:text-brand-text-secondary transition-colors"
+            >
+              {item}
+            </a>
+          </li>
         ))}
       </ul>
     </div>
     <div>
-      <p class="text-xs uppercase tracking-[0.15em] text-brand-text-secondary mb-4">About</p>
-      <ul class="space-y-2">
+      <p class="section-label mb-5">About</p>
+      <ul class="space-y-3">
         {['Our Story', 'Quality', 'Materials', 'Careers'].map((item) => (
-          <li><a href={`/${item.toLowerCase().replace(/\s+/g, '-')}`} class="text-sm text-brand-primary hover:text-brand-text-secondary transition-colors">{item}</a></li>
+          <li>
+            <a href={`/${item.toLowerCase().replace(/\s+/g, '-')}`} class="text-sm text-brand-primary hover:text-brand-text-secondary transition-colors">
+              {item}
+            </a>
+          </li>
         ))}
       </ul>
     </div>
     <div>
-      <p class="text-xs uppercase tracking-[0.15em] text-brand-text-secondary mb-4">Support</p>
-      <ul class="space-y-2">
+      <p class="section-label mb-5">Support</p>
+      <ul class="space-y-3">
         {['Warranty', 'Shipping', 'Returns', 'Contact', 'FAQ'].map((item) => (
-          <li><a href={`/${item.toLowerCase()}`} class="text-sm text-brand-primary hover:text-brand-text-secondary transition-colors">{item}</a></li>
+          <li>
+            <a href={`/${item.toLowerCase()}`} class="text-sm text-brand-primary hover:text-brand-text-secondary transition-colors">
+              {item}
+            </a>
+          </li>
         ))}
       </ul>
     </div>
     <div>
-      <p class="text-xs uppercase tracking-[0.15em] text-brand-text-secondary mb-4">Follow</p>
-      <ul class="space-y-2">
+      <p class="section-label mb-5">Follow</p>
+      <ul class="space-y-3">
         {['Instagram', 'YouTube', 'Twitter'].map((item) => (
-          <li><a href="#" class="text-sm text-brand-primary hover:text-brand-text-secondary transition-colors">{item}</a></li>
+          <li>
+            <a href="#" class="text-sm text-brand-primary hover:text-brand-text-secondary transition-colors">
+              {item}
+            </a>
+          </li>
         ))}
       </ul>
       <div class="mt-8">
-        <p class="text-xs text-brand-text-secondary">$ USD</p>
+        <p class="text-[11px] font-medium uppercase tracking-[0.1em] text-brand-text-secondary">$ USD</p>
       </div>
     </div>
   </div>
-  <div class="max-w-7xl mx-auto mt-12 pt-8 border-t border-gray-200 flex flex-col md:flex-row justify-between items-center gap-4">
-    <div class="flex gap-4">
-      {['Visa', 'Mastercard', 'Amex', 'PayPal'].map((item) => (
-        <span class="text-xs text-brand-text-secondary">{item}</span>
+
+  <div class="max-w-7xl mx-auto mt-16 pt-8 border-t border-brand-primary/10 flex flex-col md:flex-row justify-between items-center gap-4">
+    <div class="flex gap-3">
+      {['VISA', 'MC', 'AMEX', 'PayPal'].map((item) => (
+        <span class="px-2 py-1 border border-brand-primary/10 text-[10px] font-bold uppercase tracking-[0.1em] text-brand-text-secondary">
+          {item}
+        </span>
       ))}
     </div>
-    <p class="text-xs text-brand-text-secondary">
+    <p class="text-[11px] text-brand-text-secondary uppercase tracking-[0.08em]">
       © {new Date().getFullYear()} Krag. Built for where roads end.
     </p>
-    <div class="flex gap-4 text-xs text-brand-text-secondary">
-      <a href="/privacy">Privacy</a>
-      <a href="/terms">Terms</a>
+    <div class="flex gap-6 text-[11px] uppercase tracking-[0.08em] text-brand-text-secondary">
+      <a href="/privacy" class="hover:text-brand-primary transition-colors">Privacy</a>
+      <a href="/terms" class="hover:text-brand-primary transition-colors">Terms</a>
     </div>
   </div>
 </footer>

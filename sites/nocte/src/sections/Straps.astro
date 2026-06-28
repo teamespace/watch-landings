@@ -10,33 +10,30 @@ const straps = [
 ]
 ---
 
-<section class="py-24 px-6 bg-white">
+<section class="py-28 md:py-36 px-6 bg-[#F7F5F2]">
   <div class="max-w-7xl mx-auto">
     <ScrollWithFade>
-      <h2 class="font-display text-4xl md:text-5xl text-[#1A1A1A] mb-4">Change it up.</h2>
+      <h2 class="section-title mb-4">Change it up.</h2>
+      <p class="section-subtitle mb-16 md:mb-24">Every watch deserves a second look.</p>
     </ScrollWithFade>
 
-    <p class="text-[#6B6B6B] text-sm mb-12">Every watch deserves a second look.</p>
-
-    <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8">
       {straps.map((s) => (
-        <a href="#" class="group">
-          <ScrollImagesReveal direction="up">
-            <div class="bg-gray-50 overflow-hidden mb-4">
-              <img src={s.img} alt={s.name} class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500" />
+        <a href="#" class="group block">
+          <ScrollImagesReveal direction="up" className="mb-5">
+            <div class="bg-[#E8E6E3] aspect-[4/5] overflow-hidden">
+              <img src={s.img} alt={s.name} class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
             </div>
-            <h3 class="font-body text-sm font-bold text-[#1A1A1A] tracking-[0.1em] uppercase">{s.name}</h3>
-            <p class="text-xs text-[#6B6B6B] mt-1">{s.price}</p>
           </ScrollImagesReveal>
+          <h3 class="font-body text-sm font-bold text-[#1A1A1A] tracking-[0.15em] uppercase">{s.name}</h3>
+          <p class="text-xs text-[#6B6B6B] mt-1">{s.price}</p>
         </a>
       ))}
     </div>
 
-    <div class="text-center mt-12">
+    <div class="text-center mt-16">
       <ScrollWithFade>
-        <a href="#" class="inline-block border border-[#1A1A1A] text-[#1A1A1A] px-10 py-3 text-sm tracking-[0.2em] uppercase hover:bg-[#1A1A1A] hover:text-white transition-colors">
-          Shop straps
-        </a>
+        <a href="#" class="btn-dark">Shop straps</a>
       </ScrollWithFade>
     </div>
   </div>

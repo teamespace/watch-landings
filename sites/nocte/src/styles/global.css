@@ -9,6 +9,14 @@
     padding: 0;
   }
 
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply font-body antialiased bg-brand-background text-brand-primary text-[15px] leading-[1.7];
+  }
+
   img {
     max-width: 100%;
     height: auto;
@@ -18,5 +26,45 @@
   a {
     color: inherit;
     text-decoration: none;
+  }
+}
+
+@layer components {
+  .section-title {
+    @apply font-display text-5xl md:text-6xl lg:text-7xl leading-[1.05] text-brand-primary;
+  }
+
+  .section-subtitle {
+    @apply text-[11px] tracking-[0.2em] uppercase text-brand-text-secondary;
+  }
+
+  .text-body {
+    @apply text-[15px] leading-[1.7] text-brand-text-secondary;
+  }
+
+  .label-upper {
+    @apply text-[11px] tracking-[0.2em] uppercase font-medium;
+  }
+
+  .btn-primary {
+    @apply inline-block border border-brand-accent text-brand-accent px-10 py-3.5 text-[11px] tracking-[0.22em] uppercase hover:bg-brand-accent hover:text-brand-surface-dark transition-colors duration-300;
+  }
+
+  .btn-dark {
+    @apply inline-block bg-brand-primary text-white px-10 py-3.5 text-[11px] tracking-[0.22em] uppercase hover:bg-[#333] transition-colors;
+  }
+
+  .btn-gold {
+    @apply inline-block bg-brand-accent text-white px-10 py-3.5 text-[11px] tracking-[0.22em] uppercase hover:bg-[#b8944f] transition-colors;
+  }
+
+  .nav-links a {
+    color: currentColor !important;
+  }
+
+  @media (max-width: 767px) {
+    .build-watch > div > div {
+      min-width: 260px;
+    }
   }
 }

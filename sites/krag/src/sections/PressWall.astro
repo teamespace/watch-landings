@@ -1,27 +1,33 @@
 ---
 import { RollingText } from 'skiper-islands'
+
+const quotes = [
+  { quote: 'The Cairn 38 hits all the basics without trying too hard. A rare thing.', source: 'WornAndWound' },
+  { quote: "Krag's Ridge 40 GMT offers dual-timezone utility at a price that doesn't punish.", source: 'Hodinkee' },
+]
 ---
 
-<section class="py-24 px-6 bg-white">
-  <div class="max-w-4xl mx-auto text-center">
-    <p class="text-xs uppercase tracking-[0.2em] text-brand-text-secondary mb-12">As seen in</p>
+<section class="py-24 md:py-32 px-6 bg-white border-y border-brand-primary/10">
+  <div class="max-w-5xl mx-auto text-center">
+    <p class="section-label mb-10">As seen in</p>
 
-    <RollingText
-      client:visible
-      items={["Hodinkee","WornAndWound","Fratello","ABlogToWatch","Watchfinder"]}
-      speed={40}
-      color="#5A5A5A"
-      fontSize="16px"
-    />
+    <div class="py-6 border-y border-brand-primary/10">
+      <RollingText
+        client:visible
+        items={['Hodinkee', 'WornAndWound', 'Fratello', 'A Blog to Watch', 'Watchfinder']}
+        speed={20}
+        color="#0D0D0D"
+        fontSize="clamp(14px, 2vw, 18px)"
+      />
+    </div>
 
-    <div class="mt-16 space-y-8">
-      {[
-        { quote: "The Cairn 38 hits all the basics without trying too hard. A rare thing.", source: "WornAndWound" },
-        { quote: "Krag's Ridge 40 GMT offers dual-timezone utility at a price that doesn't punish.", source: "Hodinkee" },
-      ].map((item) => (
-        <blockquote class="text-brand-primary text-lg md:text-xl italic leading-relaxed max-w-2xl mx-auto">
-          &ldquo;{item.quote}&rdquo;
-          <cite class="block text-sm not-italic text-brand-text-secondary mt-2">— {item.source}</cite>
+    <div class="mt-16 grid md:grid-cols-2 gap-10 text-left">
+      {quotes.map((item) => (
+        <blockquote class="relative pl-6 border-l-2 border-brand-warm">
+          <p class="text-brand-primary text-base md:text-lg leading-relaxed">“{item.quote}”</p>
+          <cite class="block mt-4 text-[10px] font-bold uppercase tracking-[0.16em] text-brand-text-secondary not-italic">
+            — {item.source}
+          </cite>
         </blockquote>
       ))}
     </div>

@@ -1,46 +1,75 @@
 ---
 import { ScrollImagesReveal } from 'skiper-islands/reveal/ScrollImagesReveal'
-import { ImageCursorTrail } from 'skiper-islands/effects/ImageCursorTrail'
 import { ScrollWithFade } from 'skiper-islands/scroll/ScrollWithFade'
+
+const stories = [
+  { id: 'tokyo', title: 'Tokyo, January', img: 'https://picsum.photos/seed/tokyo+night+editorial+photo/800/600' },
+  { id: 'oslo', title: 'Oslo, March', img: 'https://picsum.photos/seed/oslo+architecture+minimal/800/600' },
+  { id: 'capetown', title: 'Cape Town, August', img: 'https://picsum.photos/seed/cape+town+editorial+landscape/800/600' },
+]
 ---
 
-<section id="lookbook" class="py-24 px-6 bg-white">
+<section id="lookbook" class="py-28 md:py-36 px-6 bg-[#F7F5F2]">
   <div class="max-w-7xl mx-auto">
     <ScrollWithFade>
-      <h2 class="font-display text-4xl md:text-5xl text-[#1A1A1A] mb-4">Lookbook</h2>
+      <h2 class="section-title mb-4">Lookbook</h2>
+      <p class="section-subtitle mb-16 md:mb-24">Where Nocte lives.</p>
     </ScrollWithFade>
 
-    <p class="text-[#6B6B6B] text-sm mb-12">Where Nocte lives.</p>
-
-    <div class="client-component">
-      <ImageCursorTrail
-        images={[
-          { src: 'https://picsum.photos/seed/tokyo+night+editorial/600/800', id: 'tokyo', label: 'Tokyo, January' },
-          { src: 'https://picsum.photos/seed/oslo+architecture+minimal/600/800', id: 'oslo', label: 'Oslo, March' },
-          { src: 'https://picsum.photos/seed/cape+town+editorial+landscape/600/800', id: 'capetown', label: 'Cape Town, August' },
-        ]}
-      >
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-          {['Tokyo, January', 'Oslo, March', 'Cape Town, August'].map((location, i) => {
-            const imgs = [
-              'https://picsum.photos/seed/tokyo+night+editorial+photo/800/600',
-              'https://picsum.photos/seed/oslo+architecture+minimal/800/600',
-              'https://picsum.photos/seed/cape+town+editorial+landscape/800/600'
-            ]
-            return (
-              <ScrollImagesReveal direction={i === 0 ? 'left' : i === 1 ? 'up' : 'right'}>
-                <div class="group cursor-pointer">
-                  <div class="overflow-hidden mb-4">
-                    <img src={imgs[i]} alt={location} class="w-full h-80 object-cover group-hover:scale-105 transition-transform duration-700" />
-                  </div>
-                  <h3 class="font-display text-xl text-[#1A1A1A]">{location}</h3>
-                  <p class="text-xs text-[#6B6B6B] tracking-[0.1em] uppercase mt-1">View story →</p>
-                </div>
-              </ScrollImagesReveal>
-            )
-          })}
+    <div class="grid grid-cols-1 md:grid-cols-12 md:grid-rows-2 gap-4 md:gap-6">
+      <!-- Large left -->
+      <a href="#" class="group md:col-span-7 md:row-span-2 flex flex-col">
+        <ScrollImagesReveal direction="left" className="flex-1 min-h-[420px] md:min-h-0">
+          <div class="relative overflow-hidden h-full">
+            <img
+              src={stories[0].img}
+              alt={stories[0].title}
+              class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+            />
+            <div class="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-500" />
+          </div>
+        </ScrollImagesReveal>
+        <div class="mt-5">
+          <h3 class="font-display text-2xl md:text-3xl text-[#1A1A1A]">{stories[0].title}</h3>
+          <p class="section-subtitle mt-1">View story →</p>
         </div>
-      </ImageCursorTrail>
+      </a>
+
+      <!-- Right top -->
+      <a href="#" class="group md:col-span-5 flex flex-col">
+        <ScrollImagesReveal direction="up" className="flex-1 min-h-[280px] md:min-h-0">
+          <div class="relative overflow-hidden h-full">
+            <img
+              src={stories[1].img}
+              alt={stories[1].title}
+              class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+            />
+            <div class="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-500" />
+          </div>
+        </ScrollImagesReveal>
+        <div class="mt-5">
+          <h3 class="font-display text-2xl text-[#1A1A1A]">{stories[1].title}</h3>
+          <p class="section-subtitle mt-1">View story →</p>
+        </div>
+      </a>
+
+      <!-- Right bottom -->
+      <a href="#" class="group md:col-span-5 flex flex-col">
+        <ScrollImagesReveal direction="right" className="flex-1 min-h-[280px] md:min-h-0">
+          <div class="relative overflow-hidden h-full">
+            <img
+              src={stories[2].img}
+              alt={stories[2].title}
+              class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+            />
+            <div class="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-500" />
+          </div>
+        </ScrollImagesReveal>
+        <div class="mt-5">
+          <h3 class="font-display text-2xl text-[#1A1A1A]">{stories[2].title}</h3>
+          <p class="section-subtitle mt-1">View story →</p>
+        </div>
+      </a>
     </div>
   </div>
 </section>

@@ -1,29 +1,27 @@
 ---
 const events = [
-  { id: 'fair', name: 'Jakarta Watch Fair 2026', date: 'March 2026', note: 'We showed the GMT Transit prototype for the first time.', img: 'https://picsum.photos/seed/watch+fair+event+community/400/300' },
-  { id: 'popup', name: 'Pop-Up at Gudang Gudang', date: 'January 2026', note: 'Two weeks in Yogyakarta. Met everyone who stopped by.', img: 'https://picsum.photos/seed/pop+up+store+editorial/400/300' },
-  { id: 'press', name: 'Featured in Warna Magazine', date: 'December 2025', note: 'A profile on independent watch brands in Southeast Asia.', img: 'https://picsum.photos/seed/magazine+editorial+watch/400/300' },
+  { id: 'fair', name: 'Jakarta Watch Fair 2026', date: 'March 2026', note: 'We showed the GMT Transit prototype for the first time.', img: 'https://picsum.photos/seed/watch+fair+event+community/600/450' },
+  { id: 'popup', name: 'Pop-Up at Gudang Gudang', date: 'January 2026', note: 'Two weeks in Yogyakarta. Met everyone who stopped by.', img: 'https://picsum.photos/seed/pop+up+store+editorial/600/450' },
+  { id: 'press', name: 'Featured in Warna Magazine', date: 'December 2025', note: 'A profile on independent watch brands in Southeast Asia.', img: 'https://picsum.photos/seed/magazine+editorial+watch/600/450' },
 ]
 ---
 
-<section class="py-16 px-6 max-w-6xl mx-auto">
-  <h2 class="text-[11px] uppercase tracking-[0.2em] text-[#7A7A72] mb-10">What we've been up to</h2>
-  <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<section class="py-16 md:py-20 px-6 max-w-6xl mx-auto">
+  <h2 class="text-[11px] uppercase tracking-label text-brand-text-secondary mb-10">What we've been up to</h2>
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
     {events.map((event) => (
-      <div class="bg-[#EFEDE8] group cursor-pointer">
-        <div class="aspect-[4/3] overflow-hidden">
-          <img src={event.img} alt={event.name} class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" />
+      <a href={`/publication/${event.id}`} class="group block">
+        <div class="aspect-[4/3] overflow-hidden mb-4 bg-brand-surface">
+          <img src={event.img} alt={event.name} class="w-full h-full object-cover group-hover:scale-[1.03] transition-transform duration-700 ease-out" loading="lazy" />
         </div>
-        <div class="p-4">
-          <p class="text-[11px] uppercase tracking-[0.1em] text-[#7A7A72]">{event.date}</p>
-          <h3 class="font-display text-lg text-[#1C1C1A] mt-1">{event.name}</h3>
-          <p class="text-sm text-[#7A7A72] mt-1 leading-relaxed">{event.note}</p>
-        </div>
-      </div>
+        <p class="text-[11px] uppercase tracking-wide text-brand-text-muted mb-2">{event.date}</p>
+        <h3 class="font-display text-xl text-brand-primary mb-2 group-hover:text-brand-accent transition-colors duration-300">{event.name}</h3>
+        <p class="text-[15px] leading-[1.65] text-brand-text-secondary">{event.note}</p>
+      </a>
     ))}
   </div>
-  <div class="mt-10 text-center">
-    <a href="/publication" class="inline-block border border-[#1C1C1A] text-[#1C1C1A] px-8 py-3 text-sm font-medium tracking-wide hover:bg-[#1C1C1A] hover:text-white transition-colors">
+  <div class="mt-12 text-center">
+    <a href="/publication" class="inline-block border border-brand-primary text-brand-primary px-8 py-3 text-sm font-medium tracking-wide hover:bg-brand-primary hover:text-brand-background transition-colors duration-300">
       See all publications
     </a>
   </div>

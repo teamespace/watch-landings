@@ -3,27 +3,33 @@ import products from '../data/products.json'
 const newProducts = products.filter(p => p.new)
 ---
 
-<section class="py-16 px-6 max-w-6xl mx-auto">
-  <h2 class="text-[11px] uppercase tracking-[0.2em] text-[#7A7A72] mb-10">New arrivals</h2>
-  <div class="grid grid-cols-2 md:grid-cols-3 gap-6">
+<section class="py-16 md:py-20 px-6 max-w-6xl mx-auto">
+  <div class="flex items-end justify-between mb-10 md:mb-12">
+    <h2 class="text-[11px] uppercase tracking-label text-brand-text-secondary">New arrivals</h2>
+    <span class="hidden sm:block text-[11px] uppercase tracking-label text-brand-text-muted">{newProducts.length} watches</span>
+  </div>
+  <div class="grid grid-cols-2 md:grid-cols-3 gap-5 md:gap-7">
     {newProducts.map((p, i) => (
-      <div class="group cursor-pointer animate-fade-in" style={`animation-delay: ${i * 0.1}s`}>
-        <div class="aspect-square bg-[#EFEDE8] mb-3 overflow-hidden relative">
+      <a href={`/products/${p.id}`} class="group block animate-fade-in" style={`animation-delay: ${i * 0.1}s`}>
+        <div class="aspect-square bg-brand-surface mb-4 overflow-hidden relative">
           <img
-            src={`https://picsum.photos/seed/watch+warm+cream+background+/400/400${encodeURIComponent(p.name)}`}
+            src={`https://picsum.photos/seed/watch+warm+cream+background+${encodeURIComponent(p.name)}/500/500`}
             alt={p.name}
-            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+            class="w-full h-full object-cover group-hover:scale-[1.04] transition-transform duration-700 ease-out"
             loading="lazy"
           />
-          <span class="absolute top-2 left-2 bg-[#C4573A] text-white text-[10px] uppercase tracking-wider px-2 py-0.5">New</span>
+          <span class="absolute top-3 left-3 bg-brand-accent text-white text-[10px] uppercase tracking-wider px-2.5 py-1">New</span>
         </div>
-        <h3 class="font-display text-base text-[#1C1C1A]">{p.name}</h3>
-        <p class="text-[#7A7A72] text-sm">{p.price}</p>
-      </div>
+        <div class="space-y-0.5">
+          <h3 class="font-display text-base md:text-lg text-brand-primary uppercase tracking-wide">{p.name}</h3>
+          <p class="text-[13px] text-brand-text-secondary lowercase">{p.collection}</p>
+          <p class="text-sm text-brand-primary font-medium pt-1">{p.price}</p>
+        </div>
+      </a>
     ))}
   </div>
-  <div class="mt-12 text-center">
-    <a href="/shop" class="inline-block border border-[#1C1C1A] text-[#1C1C1A] px-10 py-3 text-sm font-medium tracking-wide hover:bg-[#1C1C1A] hover:text-white transition-colors">
+  <div class="mt-14 text-center">
+    <a href="/shop" class="inline-block border border-brand-primary text-brand-primary px-10 py-3 text-sm font-medium tracking-wide hover:bg-brand-primary hover:text-brand-background transition-colors duration-300">
       Shop all watches
     </a>
   </div>

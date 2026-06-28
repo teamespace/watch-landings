@@ -1,23 +1,46 @@
 ---
 ---
 
-<nav class="sticky top-0 z-50 bg-white/98 backdrop-blur-md" style="background-color: rgba(255,255,255,0.98);">
-  <div class="flex items-center justify-between h-14 px-6">
-    <div class="flex-1">
-      <a href="/" class="text-lg font-bold tracking-tighter lowercase text-[#0A0A0A]">formd</a>
+<nav class="sticky top-0 z-50 bg-white border-b border-brand-grid">
+  <div class="flex items-center justify-between h-16 px-6 md:px-10">
+    <a href="/" class="text-xl font-bold tracking-tight lowercase text-brand-primary">formd</a>
+
+    <div class="hidden md:flex items-center gap-10">
+      <a href="/watches" class="text-label text-brand-primary hover:text-brand-accent transition-colors duration-200">Watches</a>
+      <a href="/watchmaking" class="text-label text-brand-primary hover:text-brand-accent transition-colors duration-200">Watchmaking</a>
+      <a href="/topics" class="text-label text-brand-primary hover:text-brand-accent transition-colors duration-200">Topics</a>
+      <a href="/shop" class="text-label text-brand-primary hover:text-brand-accent transition-colors duration-200">Shop</a>
     </div>
-    <div class="hidden md:flex items-center gap-7">
-      <a href="/watches" class="text-xs text-[#0A0A0A] opacity-80 hover:opacity-100 transition-opacity">Watches</a>
-      <a href="/watchmaking" class="text-xs text-[#0A0A0A] opacity-80 hover:opacity-100 transition-opacity">Watchmaking</a>
-      <a href="/topics" class="text-xs text-[#0A0A0A] opacity-80 hover:opacity-100 transition-opacity">Topics</a>
-      <a href="/shop" class="text-xs text-[#0A0A0A] opacity-80 hover:opacity-100 transition-opacity">Shop</a>
+
+    <div class="hidden md:flex items-center gap-8">
+      <a href="/search" class="text-label text-brand-text-secondary hover:text-brand-primary transition-colors duration-200">Search</a>
+      <a href="/wishlist" class="text-label text-brand-text-secondary hover:text-brand-primary transition-colors duration-200">Wishlist</a>
+      <a href="/account" class="text-label text-brand-text-secondary hover:text-brand-primary transition-colors duration-200">Account</a>
+      <a href="/language" class="text-label text-brand-text-secondary hover:text-brand-primary transition-colors duration-200">EN</a>
     </div>
-    <div class="flex-1 flex justify-end gap-5">
-      <a href="/search" class="text-xs text-[#0A0A0A] opacity-60 hover:opacity-100 transition-opacity">Search</a>
-      <a href="/wishlist" class="text-xs text-[#0A0A0A] opacity-60 hover:opacity-100 transition-opacity">Wishlist</a>
-      <a href="/account" class="text-xs text-[#0A0A0A] opacity-60 hover:opacity-100 transition-opacity">Account</a>
-      <a href="/language" class="text-xs text-[#0A0A0A] opacity-60 hover:opacity-100 transition-opacity">EN</a>
+
+    <button
+      type="button"
+      aria-label="Open menu"
+      class="md:hidden flex flex-col justify-center gap-1.5 w-8 h-8"
+      onclick="document.getElementById('mobile-menu').classList.toggle('hidden')"
+    >
+      <span class="block w-5 h-px bg-brand-primary"></span>
+      <span class="block w-5 h-px bg-brand-primary"></span>
+    </button>
+  </div>
+
+  <div id="mobile-menu" class="hidden md:hidden border-t border-brand-grid bg-white">
+    <div class="px-6 py-6 flex flex-col gap-4">
+      <a href="/watches" class="text-label text-brand-primary">Watches</a>
+      <a href="/watchmaking" class="text-label text-brand-primary">Watchmaking</a>
+      <a href="/topics" class="text-label text-brand-primary">Topics</a>
+      <a href="/shop" class="text-label text-brand-primary">Shop</a>
+      <div class="h-px bg-brand-grid my-2"></div>
+      <a href="/search" class="text-label text-brand-text-secondary">Search</a>
+      <a href="/wishlist" class="text-label text-brand-text-secondary">Wishlist</a>
+      <a href="/account" class="text-label text-brand-text-secondary">Account</a>
+      <a href="/language" class="text-label text-brand-text-secondary">EN</a>
     </div>
   </div>
-  <div class="h-px w-full bg-[#E0E0E0]" />
 </nav>

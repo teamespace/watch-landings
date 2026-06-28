@@ -1,35 +1,63 @@
 ---
 import { HorizontalTextReveal } from 'skiper-islands'
+
+const specs = [
+  { label: 'Case', value: '38mm' },
+  { label: 'Movement', value: 'SW200' },
+  { label: 'Water', value: '100m' },
+  { label: 'Crystal', value: 'Sapphire' },
+]
 ---
 
-<section class="py-24 px-6 bg-[#EDEDEA]">
-  <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
-    <div class="aspect-square overflow-hidden">
+<section class="py-24 md:py-32 px-6 bg-brand-surface-mid">
+  <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-10 md:gap-16 items-center">
+    <div class="md:order-2 relative aspect-square overflow-hidden bg-[#E0E0DD]">
       <img
-        src="https://picsum.photos/seed/field+watch+outdoor/600/600"
+        src="https://picsum.photos/seed/field+watch+outdoor/800/800"
         alt="Cairn 38 Field"
         class="w-full h-full object-cover"
       />
     </div>
-    <div>
-      <HorizontalTextReveal
-        client:visible
-        text="CAIRN 38 FIELD"
-        color="#0D0D0D"
-        fontSize="clamp(1.8rem, 4vw, 3rem)"
-        fontWeight={700}
-        direction="left"
-      />
-      <p class="text-brand-text-secondary text-base leading-relaxed mt-6 max-w-md">
+
+    <div class="md:order-1">
+      <p class="kicker mb-3">Field Tested</p>
+
+      <div class="cairn-title">
+        <HorizontalTextReveal
+          client:visible
+          text="CAIRN 38 FIELD"
+          color="#0D0D0D"
+          fontSize="clamp(2rem, 5vw, 3.5rem)"
+          fontWeight={700}
+          direction="left"
+        />
+      </div>
+
+      <p class="body-muted text-base md:text-lg mt-6 max-w-md">
         Swiss mechanical movement, 80-hour power reserve, anti-reflective sapphire crystal. The watch you pack first.
       </p>
-      <p class="text-2xl font-bold text-brand-primary mt-6">$490</p>
-      <a
-        href="/collections/cairn-38-field"
-        class="inline-block mt-6 px-8 py-3 border border-brand-primary text-brand-primary text-sm uppercase tracking-widest hover:bg-brand-primary hover:text-white transition-colors"
-      >
+
+      <div class="mt-8 grid grid-cols-2 sm:grid-cols-4 gap-3">
+        {specs.map((spec) => (
+          <div class="spec-pill-dark flex-col items-start">
+            <span class="text-[9px] text-brand-text-secondary uppercase tracking-[0.12em]">{spec.label}</span>
+            <span class="text-xs font-bold uppercase tracking-[0.06em] mt-1">{spec.value}</span>
+          </div>
+        ))}
+      </div>
+
+      <p class="text-2xl font-bold text-brand-primary mt-8 tracking-tight">$490</p>
+
+      <a href="/collections/cairn-38-field" class="btn-ghost mt-6">
         Discover
       </a>
     </div>
   </div>
 </section>
+
+<style>
+  .cairn-title h2 {
+    letter-spacing: 0.04em !important;
+    line-height: 0.95 !important;
+  }
+</style>

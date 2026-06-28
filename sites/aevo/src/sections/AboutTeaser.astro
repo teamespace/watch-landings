@@ -2,12 +2,12 @@
 import { OliverParallax } from 'skiper-islands'
 ---
 
-<section class="py-16 px-6 max-w-5xl mx-auto">
-  <div class="grid md:grid-cols-2 gap-10 items-center">
+<section class="py-20 md:py-28 px-6 max-w-6xl mx-auto">
+  <div class="grid md:grid-cols-2 gap-12 md:gap-16 items-center">
     <OliverParallax speed={0.3}>
       <div class="aspect-[4/5] overflow-hidden">
         <img
-          src="https://picsum.photos/seed/stockholm+scandinavian+interior/600/750"
+          src="https://picsum.photos/seed/stockholm+scandinavian+interior/800/1000"
           alt="Aevo studio in Stockholm"
           class="w-full h-full object-cover"
           loading="lazy"
@@ -15,17 +15,17 @@ import { OliverParallax } from 'skiper-islands'
       </div>
     </OliverParallax>
     <div>
-      <h2 class="text-3xl font-bold lowercase mb-4 leading-tight">We've been at it since 2007. Still haven't gotten bored.</h2>
-      <p class="text-sm text-[#888888] leading-relaxed mb-4">
+      <span class="section-label mb-4 block">Our story</span>
+      <h2 class="text-4xl md:text-5xl font-bold lowercase leading-[1.05] tracking-tight mb-6">
+        We've been at it since 2007. Still haven't gotten bored.
+      </h2>
+      <p class="text-base text-brand-text-secondary leading-relaxed mb-5">
         What started as a small workshop in Södermalm has grown into a team of twelve designers, engineers, and storytellers. We make watches for people who care about how things are made, not just how they look.
       </p>
-      <p class="text-sm text-[#888888] leading-relaxed mb-6">
+      <p class="text-base text-brand-text-secondary leading-relaxed mb-8">
         Every material we choose, every supplier we work with, is a decision we stand behind. No shortcuts, no corners cut. Just honest design.
       </p>
-      <a
-        href="/about"
-        class="inline-block border border-[#111] text-[#111] px-8 py-3 text-sm font-medium lowercase hover:bg-[#111] hover:text-white transition-colors"
-      >
+      <a href="/about" class="btn-secondary">
         Read our story
       </a>
     </div>

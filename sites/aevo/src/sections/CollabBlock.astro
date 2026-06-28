@@ -2,21 +2,24 @@
 import { ScrollImagesReveal } from 'skiper-islands'
 ---
 
-<section class="relative h-[500px] overflow-hidden">
+<section class="relative h-[540px] md:h-[620px] overflow-hidden">
   <div
     class="absolute inset-0 bg-cover bg-center"
     style="background-image: url('https://picsum.photos/seed/ocean+plastic+beach/1920/600')"
   />
-  <div class="absolute inset-0 bg-black/50" />
+  <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent" />
   <ScrollImagesReveal direction="up">
-    <div class="relative z-10 flex flex-col justify-center items-center h-full text-center text-white px-6 max-w-2xl mx-auto">
-      <h2 class="text-3xl md:text-4xl font-bold lowercase mb-4">Made from recycled ocean plastic. For real.</h2>
-      <p class="text-sm md:text-base text-white/80 mb-6 leading-relaxed">
+    <div class="relative z-10 flex flex-col justify-center items-center h-full text-center text-white px-6 max-w-3xl mx-auto">
+      <span class="section-label text-white/70 mb-4">Aevo x Marine Conservation Society</span>
+      <h2 class="text-4xl md:text-5xl font-bold lowercase leading-[1.05] tracking-tight mb-6">
+        Made from recycled ocean plastic. For real.
+      </h2>
+      <p class="text-base md:text-lg text-white/85 mb-8 leading-relaxed max-w-2xl">
         We partnered with the Marine Conservation Society to turn ocean-bound plastic into watch straps that look good and do good. Each purchase funds a kilo of plastic pulled from the sea.
       </p>
       <a
         href="/collabs"
-        class="inline-block border border-white text-white px-8 py-3 text-sm font-medium lowercase hover:bg-white hover:text-[#111] transition-colors"
+        class="inline-block border border-white text-white px-8 py-3.5 text-sm font-medium lowercase tracking-wide hover:bg-white hover:text-brand-primary transition-all duration-300"
       >
         Explore the collab
       </a>

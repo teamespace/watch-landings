@@ -1,4 +1,4 @@
-import { PerspectiveCarousel, ExpandOnHover } from 'skiper-islands'
+import { motion } from 'framer-motion'
 
 interface Product {
   id: string
@@ -11,41 +11,45 @@ interface Product {
 
 export function BestsellersCarousel({ products }: { products: Product[] }) {
   return (
-    <PerspectiveCarousel
-      items={products.map(p => ({
-        id: p.id,
-        label: p.name,
-        content: (
-          <ExpandOnHover
-            width={280}
-            height={360}
-            expandedContent={
-              <div className="flex gap-1.5 px-4 pb-3">
-                {p.colors.map(c => (
-                  <span className="w-3 h-3 rounded-full border border-gray-200" style={{ backgroundColor: c }} />
-                ))}
-              </div>
-            }
-          >
-            <div className="p-0">
-              <div className="aspect-square bg-[#F4F4F0] overflow-hidden">
-                <img
-                  src={`https://picsum.photos/seed/watch+minimal+/400/400${p.name}`}
-                  alt={p.name}
-                  className="w-full h-full object-cover"
-                  loading="lazy"
-                />
-              </div>
-              <div className="px-4 pt-3">
-                <h3 className="font-medium text-sm lowercase">{p.name}</h3>
-                <p className="text-[#888888] text-sm">{p.price}</p>
-              </div>
+    <div className="grid grid-cols-2 md:grid-cols-4 gap-x-4 md:gap-x-6 gap-y-10">
+      {products.map((p, i) => (
+        <motion.div
+          key={p.id}
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: '-60px' }}
+          transition={{
+            duration: 0.55,
+            delay: i * 0.08,
+            ease: [0.25, 0.1, 0.25, 1],
+          }}
+        >
+          <div className="group cursor-pointer">
+            <div className="aspect-[4/5] bg-brand-surface mb-4 overflow-hidden relative">
+              <img
+                src={`https://picsum.photos/seed/watch+minimal+${p.name}/600/750`}
+                alt={p.name}
+                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
+                loading="lazy"
+              />
             </div>
-          </ExpandOnHover>
-        ),
-      }))}
-      autoPlay={true}
-      interval={4000}
-    />
+            <h3 className="font-medium text-base lowercase tracking-tight text-brand-primary">
+              {p.name}
+            </h3>
+            <p className="text-sm text-brand-text-secondary mt-0.5 mb-3">{p.price}</p>
+            <div className="flex items-center gap-2">
+              {p.colors.map((c, idx) => (
+                <span
+                  key={idx}
+                  className="w-4 h-4 rounded-full border border-black/10 shadow-sm"
+                  style={{ backgroundColor: c }}
+                  aria-hidden="true"
+                />
+              ))}
+            </div>
+          </div>
+        </motion.div>
+      ))}
+    </div>
   )
 }

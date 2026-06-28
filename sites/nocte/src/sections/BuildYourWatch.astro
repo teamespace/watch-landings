@@ -3,22 +3,21 @@ import { BuildWatch } from '../components/BuildWatch'
 import { ScrollWithFade } from 'skiper-islands/scroll/ScrollWithFade'
 ---
 
-<section class="py-24 px-6 bg-[#F7F5F2]">
+<section class="py-28 md:py-36 px-6 bg-[#F7F5F2]">
   <div class="max-w-5xl mx-auto">
     <ScrollWithFade>
-      <h2 class="font-display text-4xl md:text-5xl text-[#1A1A1A] mb-4 text-center">Make it yours.</h2>
+      <h2 class="section-title text-center mb-5">Make it yours.</h2>
+      <p class="text-body text-center max-w-lg mx-auto mb-16 md:mb-20">
+        Choose your case, pick a strap, see the result before you buy.
+      </p>
     </ScrollWithFade>
 
-    <p class="text-center text-[#6B6B6B] text-sm mb-12 max-w-md mx-auto">
-      Choose your case, pick a strap, see the result before you buy.
-    </p>
+    <div class="build-watch overflow-x-auto -mx-6 px-6 md:mx-0 md:px-0">
+      <BuildWatch client:load />
+    </div>
 
-    <BuildWatch client:load />
-
-    <div class="text-center mt-10">
-      <a href="#" class="inline-block bg-[#1A1A1A] text-white px-10 py-3 text-sm tracking-[0.2em] uppercase hover:bg-[#333] transition-colors">
-        Start building
-      </a>
+    <div class="text-center mt-14">
+      <a href="#" class="btn-dark">Start building</a>
     </div>
   </div>
 </section>

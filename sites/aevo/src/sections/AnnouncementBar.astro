@@ -7,16 +7,21 @@ const messages = [
 ---
 
 <div class="announcement-bar">
-  <span id="announcement-text" class="text-white text-[13px] tracking-wide">{messages[0]}</span>
+  <span id="announcement-text" class="text-white text-[13px] font-medium tracking-[0.02em]">{messages[0]}</span>
 </div>
 
 <style>
   .announcement-bar {
     background: #2D4A3E;
     text-align: center;
-    padding: 8px 16px;
+    padding: 10px 16px;
     position: relative;
     z-index: 101;
+  }
+
+  #announcement-text {
+    display: inline-block;
+    transition: opacity 250ms ease-in-out;
   }
 </style>
 
@@ -31,7 +36,7 @@ const messages = [
       setTimeout(() => {
         el.textContent = messages[index]
         el.style.opacity = '1'
-      }, 200)
+      }, 250)
     }, 4000)
   }
 </script>

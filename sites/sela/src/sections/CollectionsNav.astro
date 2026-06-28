@@ -1,29 +1,29 @@
 ---
 const collections = [
-  { name: 'GMT Transit', slug: 'gmt-transit', img: 'https://picsum.photos/seed/gmt+watch+travel/200/200' },
-  { name: 'Kronosprinter', slug: 'kronosprinter', img: 'https://picsum.photos/seed/watch+chronograph/200/200' },
-  { name: 'Meca', slug: 'meca', img: 'https://picsum.photos/seed/watch+quartz/200/200' },
-  { name: 'Astronomer', slug: 'astronomer', img: 'https://picsum.photos/seed/watch+astronomy/200/200' },
-  { name: 'Zenga', slug: 'zenga', img: 'https://picsum.photos/seed/watch+leather+strap/200/200' },
-  { name: 'Pa:Gi', slug: 'pagi', img: 'https://picsum.photos/seed/watch+morning+light/200/200' },
-  { name: 'So:Re', slug: 'sore', img: 'https://picsum.photos/seed/watch+afternoon/200/200' },
+  { name: 'GMT Transit', slug: 'gmt-transit', img: 'https://picsum.photos/seed/gmt+watch+travel/400/400' },
+  { name: 'Kronosprinter', slug: 'kronosprinter', img: 'https://picsum.photos/seed/watch+chronograph/400/400' },
+  { name: 'Meca', slug: 'meca', img: 'https://picsum.photos/seed/watch+quartz/400/400' },
+  { name: 'Astronomer', slug: 'astronomer', img: 'https://picsum.photos/seed/watch+astronomy/400/400' },
+  { name: 'Zenga', slug: 'zenga', img: 'https://picsum.photos/seed/watch+leather+strap/400/400' },
+  { name: 'Pa:Gi', slug: 'pagi', img: 'https://picsum.photos/seed/watch+morning+light/400/400' },
+  { name: 'So:Re', slug: 'sore', img: 'https://picsum.photos/seed/watch+afternoon/400/400' },
 ]
 ---
 
-<section class="py-16 px-6 max-w-6xl mx-auto">
-  <h2 class="text-[11px] uppercase tracking-[0.2em] text-[#7A7A72] mb-10">What we make</h2>
-  <div class="flex gap-4 overflow-x-auto pb-4 snap-x snap-mandatory scrollbar-hide -mx-6 px-6">
+<section class="py-16 md:py-20 px-6 max-w-6xl mx-auto">
+  <h2 class="text-[11px] uppercase tracking-label text-brand-text-secondary mb-10">What we make</h2>
+  <div class="flex gap-4 md:gap-5 overflow-x-auto pb-6 snap-x snap-mandatory scrollbar-hide -mx-6 px-6">
     {collections.map((col) => (
       <a
         href={`/collections/${col.slug}`}
-        class="snap-start shrink-0 group block w-[180px]"
+        class="snap-start shrink-0 group block w-[200px] md:w-[220px]"
       >
-        <div class="h-12 bg-[#EFEDE8] overflow-hidden transition-all duration-400 ease-[cubic-bezier(0.76,0,0.24,1)] group-hover:h-[200px]">
-          <div class="h-12 flex items-center px-4">
-            <span class="font-display text-lg text-[#1C1C1A]">{col.name}</span>
+        <div class="bg-brand-surface overflow-hidden transition-all duration-500 ease-[cubic-bezier(0.76,0,0.24,1)] h-14 group-hover:h-[220px]">
+          <div class="h-14 flex items-center px-4 border-b border-transparent group-hover:border-brand-surface-warm transition-colors duration-500">
+            <span class="font-display text-lg md:text-xl text-brand-primary">{col.name}</span>
           </div>
-          <div class="px-4 pb-4 opacity-0 group-hover:opacity-100 transition-opacity duration-200 delay-150">
-            <img src={col.img} alt={col.name} class="w-full h-32 object-cover" loading="lazy" />
+          <div class="px-4 pb-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-150">
+            <img src={col.img} alt={col.name} class="w-full h-36 md:h-40 object-cover" loading="lazy" />
           </div>
         </div>
       </a>

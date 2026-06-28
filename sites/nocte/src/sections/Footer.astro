@@ -2,51 +2,61 @@
 import { ScrollWithFade } from 'skiper-islands/scroll/ScrollWithFade'
 ---
 
-<footer class="bg-[#111111] border-t border-white/10 py-16 px-6">
-  <div class="max-w-7xl mx-auto">
+<footer class="relative bg-[#111111] border-t border-white/10 py-20 md:py-24 px-6 overflow-hidden">
+  <div class="absolute inset-0 bg-gradient-to-b from-[#151515] to-[#111111]"></div>
+  <div
+    class="absolute inset-0 opacity-[0.03]"
+    style="background-image: url('data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22200%22 height=%22200%22 opacity=%221%22%3E%3Cfilter id=%22n%22%3E%3CfeTurbulence type=%22fractalNoise%22 baseFrequency=%220.65%22 numOctaves=%223%22/%3E%3C/filter%3E%3Crect width=%22100%25%22 height=%22100%25%22 filter=%22url(%23n)%22/%3E%3C/svg%3E'); background-size: 200px;"
+  ></div>
+
+  <div class="relative z-10 max-w-7xl mx-auto">
     <ScrollWithFade>
-      <div class="grid grid-cols-2 md:grid-cols-3 gap-10 mb-12">
+      <div class="mb-16">
+        <a href="/" class="font-display text-3xl text-white tracking-wider">nocte</a>
+      </div>
+
+      <div class="grid grid-cols-2 md:grid-cols-3 gap-12 md:gap-10 mb-16">
         <div>
-          <h4 class="text-white text-xs tracking-[0.2em] uppercase font-bold mb-6">Collections</h4>
-          <ul class="space-y-3">
-            <li><a href="#" class="text-[#888888] text-sm hover:text-white transition-colors">Nox 36</a></li>
-            <li><a href="#" class="text-[#888888] text-sm hover:text-white transition-colors">Nox 40</a></li>
-            <li><a href="#" class="text-[#888888] text-sm hover:text-white transition-colors">Vigil GMT</a></li>
-            <li><a href="#" class="text-[#888888] text-sm hover:text-white transition-colors">Vigil Date</a></li>
-            <li><a href="#" class="text-[#888888] text-sm hover:text-white transition-colors">Straps</a></li>
+          <h4 class="text-white/50 text-[11px] tracking-[0.2em] uppercase font-medium mb-8">Collections</h4>
+          <ul class="space-y-4">
+            <li><a href="#" class="text-white/40 text-sm hover:text-[#C9A96E] transition-colors">Nox 36</a></li>
+            <li><a href="#" class="text-white/40 text-sm hover:text-[#C9A96E] transition-colors">Nox 40</a></li>
+            <li><a href="#" class="text-white/40 text-sm hover:text-[#C9A96E] transition-colors">Vigil GMT</a></li>
+            <li><a href="#" class="text-white/40 text-sm hover:text-[#C9A96E] transition-colors">Vigil Date</a></li>
+            <li><a href="#" class="text-white/40 text-sm hover:text-[#C9A96E] transition-colors">Straps</a></li>
           </ul>
         </div>
 
         <div>
-          <h4 class="text-white text-xs tracking-[0.2em] uppercase font-bold mb-6">Info</h4>
-          <ul class="space-y-3">
-            <li><a href="#" class="text-[#888888] text-sm hover:text-white transition-colors">About</a></li>
-            <li><a href="#" class="text-[#888888] text-sm hover:text-white transition-colors">Lookbook</a></li>
-            <li><a href="#" class="text-[#888888] text-sm hover:text-white transition-colors">Warranty</a></li>
-            <li><a href="#" class="text-[#888888] text-sm hover:text-white transition-colors">Shipping</a></li>
-            <li><a href="#" class="text-[#888888] text-sm hover:text-white transition-colors">Returns</a></li>
+          <h4 class="text-white/50 text-[11px] tracking-[0.2em] uppercase font-medium mb-8">Info</h4>
+          <ul class="space-y-4">
+            <li><a href="#" class="text-white/40 text-sm hover:text-[#C9A96E] transition-colors">About</a></li>
+            <li><a href="#" class="text-white/40 text-sm hover:text-[#C9A96E] transition-colors">Lookbook</a></li>
+            <li><a href="#" class="text-white/40 text-sm hover:text-[#C9A96E] transition-colors">Warranty</a></li>
+            <li><a href="#" class="text-white/40 text-sm hover:text-[#C9A96E] transition-colors">Shipping</a></li>
+            <li><a href="#" class="text-white/40 text-sm hover:text-[#C9A96E] transition-colors">Returns</a></li>
           </ul>
         </div>
 
         <div>
-          <h4 class="text-white text-xs tracking-[0.2em] uppercase font-bold mb-6">Follow</h4>
-          <ul class="space-y-3">
-            <li><a href="#" class="text-[#888888] text-sm hover:text-white transition-colors">Instagram</a></li>
-            <li><a href="#" class="text-[#888888] text-sm hover:text-white transition-colors">X / Twitter</a></li>
-            <li><a href="#" class="text-[#888888] text-sm hover:text-white transition-colors">YouTube</a></li>
+          <h4 class="text-white/50 text-[11px] tracking-[0.2em] uppercase font-medium mb-8">Follow</h4>
+          <ul class="space-y-4">
+            <li><a href="#" class="text-white/40 text-sm hover:text-[#C9A96E] transition-colors">Instagram</a></li>
+            <li><a href="#" class="text-white/40 text-sm hover:text-[#C9A96E] transition-colors">X / Twitter</a></li>
+            <li><a href="#" class="text-white/40 text-sm hover:text-[#C9A96E] transition-colors">YouTube</a></li>
           </ul>
         </div>
       </div>
 
-      <div class="flex flex-col md:flex-row items-center justify-between pt-8 border-t border-white/10 gap-4">
-        <p class="text-[#6B6B6B] text-xs">
+      <div class="flex flex-col md:flex-row items-center justify-between pt-10 border-t border-white/10 gap-6">
+        <p class="text-white/30 text-xs">
           &copy; {new Date().getFullYear()} Nocte. All rights reserved.
         </p>
-        <div class="flex gap-4">
-          <span class="text-[#6B6B6B] text-xs border border-white/10 px-3 py-1">Visa</span>
-          <span class="text-[#6B6B6B] text-xs border border-white/10 px-3 py-1">Mastercard</span>
-          <span class="text-[#6B6B6B] text-xs border border-white/10 px-3 py-1">Amex</span>
-          <span class="text-[#6B6B6B] text-xs border border-white/10 px-3 py-1">PayPal</span>
+        <div class="flex gap-3">
+          <span class="text-white/30 text-xs border border-white/10 px-3 py-1">Visa</span>
+          <span class="text-white/30 text-xs border border-white/10 px-3 py-1">Mastercard</span>
+          <span class="text-white/30 text-xs border border-white/10 px-3 py-1">Amex</span>
+          <span class="text-white/30 text-xs border border-white/10 px-3 py-1">PayPal</span>
         </div>
       </div>
     </ScrollWithFade>
