@@ -16,7 +16,7 @@ export default function Hero() {
     <section className="relative h-screen w-full overflow-hidden bg-[#fcf5e2] flex flex-col items-center justify-center text-[#1b1b1b]">
       <h2
         ref={textRef}
-        className="max-md:text-[10vw] text-center text-[9vw] font-semibold leading-[.8] tracking-tight opacity-0 translate-y-8 transition-all duration-700"
+        className="max-md:text-[8vw] text-center text-[5vw] font-semibold leading-[.9] tracking-tight opacity-0 translate-y-8 transition-all duration-700"
       >
         Watches for wherever
         <br />
