@@ -19,6 +19,13 @@
     @apply font-body text-brand-primary;
     font-size: 15px;
     line-height: 1.65;
+    padding-top: 86px;
+  }
+
+  @media (max-width: 600px) {
+    body {
+      padding-top: 78px;
+    }
   }
 
   img {
@@ -67,7 +74,7 @@
   .header {
     background-color: #F4F4F0;
     position: fixed;
-    top: 0;
+    top: 40px;
     left: 0;
     width: 100%;
     padding: 10px;
