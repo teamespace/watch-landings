@@ -94,7 +94,7 @@ importers:
         specifier: ^5.5.0
         version: 5.9.3
 
-  sites/aevo:
+  sites/altr:
     dependencies:
       '@astrojs/cloudflare':
         specifier: ^12.0.0
@@ -157,6 +157,19 @@ importers:
       '@types/react-dom':
         specifier: ^18.3.0
         version: 18.3.7(@types/react@18.3.31)
+      typescript:
+        specifier: ^5.5.0
+        version: 5.9.3
+
+  sites/edgehaul-byes:
+    dependencies:
+      '@astrojs/cloudflare':
+        specifier: ^12.0.0
+        version: 12.6.13(astro@5.18.2(jiti@1.21.7)(rollup@4.62.2)(typescript@5.9.3)(yaml@2.9.0))(jiti@1.21.7)(yaml@2.9.0)
+      astro:
+        specifier: ^5.0.0
+        version: 5.18.2(jiti@1.21.7)(rollup@4.62.2)(typescript@5.9.3)(yaml@2.9.0)
+    devDependencies:
       typescript:
         specifier: ^5.5.0
         version: 5.9.3
